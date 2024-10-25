@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="la ville de Pau les informations en marketing digital, la communauté des parents, les entreprises locales "
+    />
+    <meta
+      name="keywords"
+      content="PAU, marketing digital,communauté, entreprise locales"
+    />
+    <meta name="author" content="Garrigues Elise" />
+    <meta
+      property="og:title"
+      content="votre ville, vos infos, votre communauté"
+    />
+    <meta
+      property="og:description"
+      content="la ville de Pau les informations en marketing digital, la communauté des parents, les entreprises locales"
+    />
+    <meta property="og:image" content="URL de l'image" />
+    <meta property="og:url" content="URL de la page" />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="votre ville, vos infos, votre communauté"
+    />
+    <meta
+      name="twitter:description"
+      content="la ville de Pau les informations en marketing digital, la communauté des parents, les entreprises locales"
+    />
+    <meta name="twitter:image" content="URL de l'image" />
+    <meta http-equiv="Cache-Control" content="public, max-age=31536000" />
+
+    <script
+      src="https://kit.fontawesome.com/bc83aad1fd.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Other meta tags and stylesheets -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+
+    <title>Pau Connect</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <header role="banner">
+        <div class="headerContainer">
+          <div id="logo">
+            <a href="index.html" aria-label="Accueil">
+              <picture>
+                <source
+                  media="(min-width: 1024px)"
+                  srcset="asset/logo-blanc.svg 1600w"
+                  sizes="1600px"
+                />
+                <source
+                  media="(min-width: 600px)"
+                  srcset="asset/logo-medium.jpg 1024w"
+                  sizes="1024px"
+                />
+                <source
+                  media="(min-width: 0px)"
+                  srcset="asset/logo-small.jpg 600w"
+                  sizes="600px"
+                />
+                <img
+                  id="logo-blanc"
+                  src="asset/logo-blanc.svg"
+                  alt="logo Pau Connect fond sombre "
+                /><img
+                  id="logo-black"
+                  src="asset/LOGO-black.svg"
+                  alt="logo Pau Connect  fond clair"
+                  loading="lazy"
+                /> </picture
+            ></a>
+          </div>
+          <nav role="navigation">
+            <ul>
+              <li>
+                <a href="#Accueil" aria-label="Accueil"
+                  ><h5>Accueil</h5>
+                  <span><i class="fas fa-home"></i></span
+                ></a>
+              </li>
+              <li>
+                <a href="#Categories" aria-label="catégories"
+                  ><h5>Catégories</h5>
+                  <span><i class="fas fa-th"></i></span
+                ></a>
+              </li>
+              <li>
+                <a href="#Entrepriseslocales" aria-label="Entreprise locales"
+                  ><h5>Entreprises Locales</h5>
+                  <span><i class="fas fa-building"></i></span
+                ></a>
+              </li>
+              <li>
+                <a href="#Espacepro" aria-label="Espace professionnel"
+                  ><h5>Espace Professionnel</h5>
+                  <span><i class="fas fa-sign-in-alt"></i></span
+                ></a>
+              </li>
+              <li>
+                <a href="#communauteparents" aria-label="Communauté des parents"
+                  ><h5>Communauté des Parents</h5>
+                  <span><i class="fas fa-comments"></i></span
+                ></a>
+              </li>
+              <li>
+                <a href="favoris" aria-label="Favoris"
+                  ><h5>Favoris</h5>
+                  <span><i class="fas fa-star"></i></span
+                ></a>
+              </li>
+              <li class="dropdown">
+                <button type="button" aria-label="Se connecter">
+                  <a href="login.html"
+                    ><span class="ghost">Se connecter</span></a
+                  >
+                </button>
+                <span><i class="fas fa-user" id="user"></i></span>
+                <span><i class="fas fa-caret-down"></i></span>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Profil</a></li>
+                  <li><a href="#">Paramètres</a></li>
+                  <li><a href="#">Déconnexion</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <!-- champs de recherche -->
+        <div class="search">
+          <div class="formSearch">
+            <span><i class="fas fa-search"></i></span>
+            <input
+              class="formSearchInput"
+              type="text"
+              placeholder="rechercher"
+              size="10"
+              dirname="Rechercher"
+            />
+            <button>
+              <span class="formSubmitInputText">Rechercher</span>
+              <!-- loupe pour version mobile -->
+              <span class="formSubmitInputIcon"
+                ><i class="fas fa-search"></i
+              ></span>
+            </button>
+          </div>
+        </div>
+      </header>
+      <main>
+        <h1>Ma ville, Mes infos, Ma communauté</h1>
+        <section id="hero">
+          <p>
+            renforcement des liens entre les habitants et les acteurs locaux.
+            Mise à disposition d'informations claires et organisées pour tous
+          </p>
+          <div class="cta">
+            <button>
+              <span id="actu">Explorer les dernières actualités</span>
+            </button>
+          </div>
+          <div class="visuel">
+            <img
+              src="asset/Life-city-amico.svg"
+              alt="ombres de différentes personnes en ville"
+              loading="lazy"
+            />
+          </div>
+        </section>
+        <section id="light">
+          <article>
+            <div class="Tete">
+              <h2>Articles en vedette</h2>
+              <p>
+                Mise en avant des derniers articles créés ou partagés, avec une
+                image, un titre et un extrait .Rassembler des informations
+                pertinentes pour les habitants du centre-ville d'une ville de 80
+                000 habitants dans le sud de la France
+              </p>
+            </div>
+            <div class="carousel">
+              <div class="card">
+                <a
+                  href="#articledetailpage1"
+                  aria-label="vers les details de l'article"
+                >
+                  <div class="topCard">
+                    <h6>Titre de l'article</h6>
+                    <div class="visuel">
+                      <img src="asset/Allura.png" alt="Allura" loading="lazy" />
+                    </div>
+                  </div>
+                  <div class="middleCard">
+                    <p>
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      brève description ou résumé, accroche.
+                    </p>
+                  </div>
+                  <div class="lowCard">
+                    <div class="detail1Card">
+                      <p>auteur</p>
+                      <img
+                        width="48"
+                        height="48"
+                        src="https://img.icons8.com/color/48/circled-user-male-skin-type-7--v1.png"
+                        alt="circled-user-male-skin-type-7--v1"
+                        loading="lazy"
+                      /><span><i class="fas fa-clock"></i></span>
+                      <p>nombre de minutes de lecture</p>
+                    </div>
+                    <div class="detail2Card">
+                      <a
+                        href="#articledetailpage1"
+                        aria-label="vers les details de l'article"
+                        ><button><span>Lire la suite </span></button></a
+                      >
+                      <p>date de publication</p>
+                      <p>cat</p>
+                      <span>50</span><span><i class="fas fa-star"></i></span
+                      ><span><i class="fas fa-share"></i></span>
+                    </div></div
+                ></a>
+              </div>
+              <div class="card">
+                <a
+                  href="#articledetailpage2"
+                  aria-label="vers les details de l'article"
+                >
+                  <div class="topCard">
+                    <h6>Titre de l'article</h6>
+                    <div class="visuel">
+                      <img src="asset/Chat.png" alt="Chat" loading="lazy" />
+                    </div>
+                  </div>
+                  <div class="middleCard">
+                    <p>
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      brève description ou résumé, accroche.
+                    </p>
+                  </div>
+                  <div class="lowCard">
+                    <div class="detail1Card">
+                      <p>auteur</p>
+                      <img
+                        width="48"
+                        height="48"
+                        src="https://img.icons8.com/color/48/circled-user-male-skin-type-7--v1.png"
+                        alt="circled-user-male-skin-type-7--v1"
+                        loading="lazy"
+                      /><span><i class="fas fa-clock"></i></span>
+                      <p>nombre de minutes de lecture</p>
+                    </div>
+                    <div class="detail2Card">
+                      <a href="#articledetailpage2"
+                        ><button><span>Lire la suite </span></button></a
+                      >
+                      <p>date de publication</p>
+                      <p>cat</p>
+                      <span>50</span><span><i class="fas fa-star"></i></span
+                      ><span><i class="fas fa-share"></i></span>
+                    </div></div
+                ></a>
+              </div>
+              <div class="card">
+                <a
+                  href="#articledetailpage3"
+                  aria-label="vers les details de l'article"
+                >
+                  <div class="topCard">
+                    <h6>Titre de l'article</h6>
+                    <div class="visuel">
+                      <img src="asset/Allura.png" alt="Allura" loading="lazy" />
+                    </div>
+                  </div>
+                  <div class="middleCard">
+                    <p>
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      brève description ou résumé, accroche.
+                    </p>
+                  </div>
+                  <div class="lowCard">
+                    <div class="detail1Card">
+                      <p>auteur</p>
+                      <img
+                        width="48"
+                        height="48"
+                        src="https://img.icons8.com/color/48/circled-user-male-skin-type-7--v1.png"
+                        alt="circled-user-male-skin-type-7--v1"
+                        loading="lazy"
+                      /><span><i class="fas fa-clock"></i></span>
+                      <p>nombre de minutes de lecture</p>
+                    </div>
+                    <div class="detail2Card">
+                      <a href="#articledetailpage3"
+                        ><button><span>Lire la suite </span></button></a
+                      >
+                      <p>date de publication</p>
+                      <p>cat</p>
+                      <span>50</span><span><i class="fas fa-star"></i></span
+                      ><span><i class="fas fa-share"></i></span>
+                    </div></div
+                ></a>
+              </div>
+              <div class="card">
+                <a
+                  href="#articledetailpage4"
+                  aria-label="vers les details de l'article"
+                >
+                  <div class="topCard">
+                    <h6>Titre de l'article</h6>
+                    <div class="visuel">
+                      <img
+                        src="asset/Discussion.png"
+                        alt="discussion"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                  <div class="middleCard">
+                    <p>
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      brève description ou résumé, accroche.
+                    </p>
+                  </div>
+                  <div class="lowCard">
+                    <div class="detail1Card">
+                      <p>auteur</p>
+                      <img
+                        width="48"
+                        height="48"
+                        src="https://img.icons8.com/color/48/circled-user-male-skin-type-7--v1.png"
+                        alt="circled-user-male-skin-type-7--v1"
+                        loading="lazy"
+                      /><span><i class="fas fa-clock"></i></span>
+                      <p>nombre de minutes de lecture</p>
+                    </div>
+                    <div class="detail2Card">
+                      <a href="#articledetailpage4"
+                        ><button><span>Lire la suite </span></button></a
+                      >
+                      <p>date de publication</p>
+                      <p>cat</p>
+                      <span>50</span><span><i class="fas fa-star"></i></span
+                      ><span><i class="fas fa-share"></i></span>
+                    </div></div
+                ></a>
+              </div>
+              <div class="card">
+                <a
+                  href="#articledetailpage5"
+                  aria-label="vers les details de l'article"
+                >
+                  <div class="topCard">
+                    <h6>Titre de l'article</h6>
+                    <div class="visuel">
+                      <img
+                        src="asset/Tech Life - Remote Life.png"
+                        alt="vie technologique"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                  <div class="middleCard">
+                    <p>
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      brève description ou résumé, accroche.
+                    </p>
+                  </div>
+                  <div class="lowCard">
+                    <div class="detail1Card">
+                      <p>auteur</p>
+                      <img
+                        width="48"
+                        height="48"
+                        src="https://img.icons8.com/color/48/circled-user-male-skin-type-7--v1.png"
+                        alt="circled-user-male-skin-type-7--v1"
+                        loading="lazy"
+                      /><span><i class="fas fa-clock"></i></span>
+                      <p>nombre de minutes de lecture</p>
+                    </div>
+                    <div class="detail2Card">
+                      <a
+                        href="#articledetailpage5"
+                        aria-label="vers les details de l'article"
+                        ><button><span>Lire la suite </span></button></a
+                      >
+                      <p>date de publication</p>
+                      <p>cat</p>
+                      <span>50</span><span><i class="fas fa-star"></i></span
+                      ><span><i class="fas fa-share"></i></span>
+                    </div></div
+                ></a>
+              </div>
+              <div class="card">
+                <a
+                  href="#articledetailpage6"
+                  aria-label="vers les details de l'article"
+                >
+                  <div class="topCard">
+                    <h6>Titre de l'article</h6>
+                    <div class="visuel">
+                      <img
+                        src="asset/Keeping-Touch.png"
+                        alt="Keeping-Touch"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                  <div class="middleCard">
+                    <p>
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      brève description ou résumé, accroche.
+                    </p>
+                  </div>
+                  <div class="lowCard">
+                    <div class="detail1Card">
+                      <p>auteur</p>
+                      <img
+                        width="48"
+                        height="48"
+                        src="https://img.icons8.com/color/48/circled-user-male-skin-type-7--v1.png"
+                        alt="circled-user-male-skin-type-7--v1"
+                        loading="lazy"
+                      /><span><i class="fas fa-clock"></i></span>
+                      <p>nombre de minutes de lecture</p>
+                    </div>
+                    <div class="detail2Card">
+                      <a href="#articledetailpage6"
+                        ><button><span>Lire la suite </span></button></a
+                      >
+                      <p>date de publication</p>
+                      <p>cat</p>
+                      <span>50</span><span><i class="fas fa-star"></i></span
+                      ><span><i class="fas fa-share"></i></span>
+                    </div></div
+                ></a>
+              </div>
+              <div class="card">
+                <a
+                  href="#articledetailpage"
+                  aria-label="vers les details de l'article"
+                >
+                  <div class="topCard">
+                    <h6>Titre de l'article</h6>
+                    <div class="visuel">
+                      <img
+                        src="asset/Home-Office.png"
+                        alt="bureau domicile"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                  <div class="middleCard">
+                    <p>
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      brève description ou résumé, accroche.
+                    </p>
+                  </div>
+                  <div class="lowCard">
+                    <div class="detail1Card">
+                      <p>auteur</p>
+                      <img
+                        width="48"
+                        height="48"
+                        src="https://img.icons8.com/color/48/circled-user-male-skin-type-7--v1.png"
+                        alt="circled-user-male-skin-type-7--v1"
+                        loading="lazy"
+                      /><span><i class="fas fa-clock"></i></span>
+                      <p>nombre de minutes de lecture</p>
+                    </div>
+                    <div class="detail2Card">
+                      <a
+                        href="#articledetailpage"
+                        aria-label="vers les details de l'article"
+                        ><button><span>Lire la suite </span></button></a
+                      >
+                      <p>date de publication</p>
+                      <p>cat</p>
+                      <span>50</span><span><i class="fas fa-star"></i></span
+                      ><span><i class="fas fa-share"></i></span>
+                    </div></div
+                ></a>
+              </div>
+            </div>
+          </article>
+          <article>
+            <div class="Tete">
+              <h2>Entreprises en Lumière</h2>
+              <p>
+                les entreprises locales, les commerces, les associations, les
+                professions libérales et les artisans du centre-ville.
+                Présentation de quelques entreprises ou artisans du centre-ville
+                avec une courte description.
+              </p>
+            </div>
+            <div class="carousel">
+              <div class="businessCard">
+                <div class="cat">Catégorie d'activité <span></span></div>
+                <div class="identity">
+                  <h6>Nom de l'entreprise</h6>
+                  <img
+                    src="asset/logo1.jpg"
+                    alt="logo entreprise"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="middleCard">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    brève description.
+                  </p>
+                </div>
+                <div class="lowCard">
+                  <div>
+                    <a
+                      href="#cieDetailPage"
+                      aria-label="vers les details de l'entreprise"
+                      ><button><span>En Savoir plus</span></button></a
+                    >
+                  </div>
+                  <div><i class="fas fa-comment-alt"></i></div>
+                  <div><i class="fas fa-star"></i></div>
+                  <div><i class="fas fa-share-alt"></i></div>
+                </div>
+              </div>
+              <div class="businessCard">
+                <div class="cat">Catégorie d'activité <span></span></div>
+                <div class="identity">
+                  <h6>Nom de l'entreprise</h6>
+                  <img
+                    src="asset/logo1.jpg"
+                    alt="logo entreprise2"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="middleCard">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    brève description.
+                  </p>
+                </div>
+                <div class="lowCard">
+                  <div>
+                    <a
+                      href="#cieDetailPage"
+                      aria-label="vers les details de l'entreprise"
+                      ><button><span>En Savoir plus</span></button></a
+                    >
+                  </div>
+                  <div><i class="fas fa-comment-alt"></i></div>
+                  <div><i class="fas fa-star"></i></div>
+                  <div><i class="fas fa-share-alt"></i></div>
+                </div>
+              </div>
+              <div class="businessCard">
+                <div class="cat">Catégorie d'activité <span></span></div>
+                <div class="identity">
+                  <h6>Nom de l'entreprise</h6>
+                  <img
+                    src="asset/logo1.jpg"
+                    alt="logo entreprise3"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="middleCard">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    brève description.
+                  </p>
+                </div>
+                <div class="lowCard">
+                  <div>
+                    <a
+                      href="#cieDetailPage"
+                      aria-label="vers les details de l'entreprise"
+                      ><button><span>En Savoir plus</span></button></a
+                    >
+                  </div>
+                  <div><i class="fas fa-comment-alt"></i></div>
+                  <div><i class="fas fa-star"></i></div>
+                  <div><i class="fas fa-share-alt"></i></div>
+                </div>
+              </div>
+              <div class="businessCard">
+                <div class="cat">Catégorie d'activité <span></span></div>
+                <div class="identity">
+                  <h6>Nom de l'entreprise</h6>
+                  <img
+                    src="asset/logo1.jpg"
+                    alt="logo entreprise4"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="middleCard">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    brève description.
+                  </p>
+                </div>
+                <div class="lowCard">
+                  <div>
+                    <a
+                      href="#cieDetailPage"
+                      aria-label="vers les details de l'entreprise5"
+                      ><button><span>En Savoir plus</span></button></a
+                    >
+                  </div>
+                  <div><i class="fas fa-comment-alt"></i></div>
+                  <div><i class="fas fa-star"></i></div>
+                  <div><i class="fas fa-share-alt"></i></div>
+                </div>
+              </div>
+              <div class="businessCard">
+                <div class="cat">Catégorie d'activité <span></span></div>
+                <div class="identity">
+                  <h6>Nom de l'entreprise</h6>
+                  <img
+                    src="asset/logo1.jpg"
+                    alt="logo entreprise6"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="middleCard">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    brève description.
+                  </p>
+                </div>
+                <div class="lowCard">
+                  <div>
+                    <a
+                      href="#cieDetailPage"
+                      aria-label="vers les details de l'entreprise"
+                      ><button><span>En Savoir plus</span></button></a
+                    >
+                  </div>
+                  <div><i class="fas fa-comment-alt"></i></div>
+                  <div><i class="fas fa-star"></i></div>
+                  <div><i class="fas fa-share-alt"></i></div>
+                </div>
+              </div>
+              <div class="businessCard">
+                <div class="cat">Catégorie d'activité <span></span></div>
+                <div class="identity">
+                  <h6>Nom de l'entreprise</h6>
+                  <img
+                    src="asset/logo1.jpg"
+                    alt="logo entreprise7"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="middleCard">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    brève description.
+                  </p>
+                </div>
+                <div class="lowCard">
+                  <div>
+                    <a
+                      href="#cieDetailPage"
+                      aria-label="vers les details de l'entreprise"
+                      ><button><span>En Savoir plus</span></button></a
+                    >
+                  </div>
+                  <div><i class="fas fa-comment-alt"></i></div>
+                  <div><i class="fas fa-star"></i></div>
+                  <div><i class="fas fa-share-alt"></i></div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </section>
+        <section class="spaces">
+          <div class="spaces container">
+            <h3>Espace pour professionnel</h3>
+            <picture
+              ><source
+                media="(min-width: 1024px)"
+                srcset="asset/Working-pana.svg"
+                sizes="1600px" />
+              <source
+                media="(min-width: 600px)"
+                srcset="asset/logo-medium.jpg 1024w"
+                sizes="1024px" />
+              <source
+                media="(min-width: 0px)"
+                srcset="asset/logo-small.jpg 600w"
+                sizes="600px" />
+              <img
+                id="espacePro"
+                src="asset/Working-pana.svg"
+                alt=" Espace professionnel "
+                loading="lazy"
+            /></picture>
+            <p>
+              Ressources professionnelles dans les domaines du marketing
+              digital, du parcours utilisateur, du comportement utilisateur, de
+              l'expérience utilisateur, du marketing digital, du SEO, du
+              développement web (maquettage, outils, matériels, langages web,
+              frameworks, etc.)
+            </p>
+          </div>
+          <div class="spaces container">
+            <h3>Communauté des parents</h3>
+            <picture
+              ><source
+                media="(min-width: 1024px)"
+                srcset="asset/Community-pana.svg"
+                sizes="1600px" />
+              <source
+                media="(min-width: 600px)"
+                srcset="asset/Community-pana.svg"
+                sizes="1024px" />
+              <source
+                media="(min-width: 0px)"
+                srcset="asset/logo-small.jpg"
+                sizes="600px" />
+              <img
+                id="community"
+                src="asset/Community-pana.svg"
+                alt=" Communauté de parents jeunes adultes adolescents enfant "
+                loading="lazy"
+            /></picture>
+            <p>
+              espace de soutien et de partage pour les parents, en particulier
+              les célibataires d'adolescents ou de jeunes adultes
+            </p>
+          </div>
+          <div class="spaces container1">
+            <button>
+              <span class="ghost">Vie Pratique</span
+              ><i class="fas fa-box-tissue"></i>
+            </button>
+            <button>
+              <span>Santé et Bien-être</span
+              ><span class="ghost"><i class="fa-solid fa-spa"></i></span>
+            </button>
+            <button>
+              <span class="ghost">Culture et Loisirs</span
+              ><span><i class="fa-solid fa-palette"></i></span>
+            </button>
+            <button>
+              <span class="ghost">Gastronomie et Restauration</span
+              ><span><i class="fa-solid fa-mug-hot"></i></span>
+            </button>
+            <button>
+              <span class="ghost">Associations et Vie Sociale</span
+              ><span><i class="fa-solid fa-hand-holding-heart"></i></span>
+            </button>
+            <button>
+              <span class="ghost">Événements Locaux</span
+              ><span><i class="fa-solid fa-calendar-days"></i></span>
+            </button>
+            <button>
+              <span class="ghost">Logement et Immobilier</span
+              ><span><i class="fa-solid fa-city"></i></span>
+            </button>
+            <button>
+              <span class="ghost">Mobilité Verte</span
+              ><span><i class="fa-solid fa-paper-plane"></i></span>
+            </button>
+            <button>
+              <span>Vie Nocturne et Divertissements</span
+              ><span><i class="fa-duotone fa-solid fa-house-night"></i></span>
+            </button>
+            <button>
+              <span class="ghost">Environnement et Nature en Ville</span>
+              <span><i class="fa-solid fa-tree"></i></span>
+            </button>
+            <button>
+              <span class="ghost">Shopping et Boutiques Locales</span>
+              <span><i class="fa-solid fa-bag-shopping"></i></span>
+            </button>
+          </div>
+        </section>
+      </main>
+      <!-- FOOTER -->
+      <footer>
+        <div class="containerFooter" id="footer">
+          <div class="footer1">
+            <!-- Newsletter section -->
+            <div class="section_footer">
+              <div class="newsletter1">
+                <h3>Recevoir notre newsletter hebdomadaire</h3>
+                <p>Soyez les premiers à savoir ce qui se passe à proximité</p>
+              </div>
+
+              <form id="newsletterForm">
+                <input
+                  type="email"
+                  placeholder="Entrer votre adresse email"
+                  required
+                />
+                <button type="submit">S'abonner</button>
+              </form>
+            </div>
+            <!-- Social media icons section -->
+            <div class="section_footer">
+              <h3>Suivez-nous sur les réseaux sociaux</h3>
+              <ul class="social-icons">
+                <li>
+                  <a href="#" aria-label="Facebook"
+                    ><i class="fab fa-facebook-f"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#" aria-label="YouTube"
+                    ><i class="fab fa-youtube"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#" aria-label="Instagram"
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#" aria-label="LinkedIn"
+                    ><i class="fab fa-linkedin-in"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#" aria-label="Twitter"
+                    ><i class="fab fa-twitter"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="footer2">
+            <div class="section_footer">
+              <h3>PauConnect</h3>
+              <ul>
+                <li>
+                  <a href="#" aria-label="Mentions Légales"
+                    >Mentions légales
+                    <span><i class="fas fa-copyright"></i></span
+                  ></a>
+                </li>
+                <li>
+                  <a href="#" aria-label="COnditions d'utilisation du site"
+                    >Conditions d'utilisation du site</a
+                  >
+                </li>
+                <li>
+                  <a href="#" aria-label="Politique de confidentialité"
+                    >Politique de confidentialité</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="section_footer">
+              <h3>Nos services</h3>
+              <ul>
+                <li>
+                  <a href="#" aria-label="Nos partenaires">Nos partenaires</a>
+                </li>
+                <li>
+                  <a href="#" aria-label="Rejoignez-nous">Rejoignez-nous</a>
+                </li>
+              </ul>
+            </div>
+            <div class="section_footer">
+              <h3>Assistance</h3>
+              <ul>
+                <li>
+                  <a href="#" aria-label="Aide"
+                    ><span class="ghost">Centre d'aide</span>
+                    <span><i class="fas fa-question-circle"></i></span
+                  ></a>
+                </li>
+                <li>
+                  <a href="#" aria-label="Nous contacter"
+                    ><span class="ghost">Nous contacter</span>
+                    <span><i class="far fa-envelope"></i></span
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
