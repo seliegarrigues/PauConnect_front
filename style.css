@@ -217,6 +217,9 @@ label {
   box-sizing: border-box;
 }
 
+main section {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .column {
@@ -243,10 +246,21 @@ header {
 .headerContainer {
   display: flex;
   align-items: center;
+  width: 100%;
+  justify-content: space-around;
+}
+.logo-nav-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 #logo img {
   height: 160px;
+}
+nav {
+  display: flex;
 }
 
 nav ul {
@@ -284,6 +298,7 @@ nav ul li span {
 }
 
 .formSearchInput {
+  width: 25em;
   padding: 10px;
   border: 1px solid #e0e2e5;
   border-radius: 2px;
@@ -330,13 +345,14 @@ nav ul li span {
 /* Light section styles */
 #light {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   gap: 20px;
 }
 
 #light article {
   flex: 1;
-  min-width: 300px;
+  width: 100%;
 }
 
 #light .Tete {
@@ -396,7 +412,7 @@ nav ul li span {
 
 #light .detail2Card {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
 }
@@ -453,12 +469,15 @@ footer {
   background-color: #2e4053;
   color: #fff;
   padding: 40px 0;
+  width: 100%;
 }
 
 #footer {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   gap: 20px;
+  width: 100%;
 }
 
 .footer1 {
@@ -538,6 +557,18 @@ footer {
 
 #newsletterForm button:hover {
   background-color: #2e4053;
+}
+.identity {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+.lowCard2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
 }
 
 /* Media queries for responsiveness */
