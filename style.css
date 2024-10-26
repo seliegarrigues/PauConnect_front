@@ -235,15 +235,16 @@ main section {
 /* Header styles */
 header {
   background-color: #2e4053;
+  color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 1rem;
   width: 100%;
   box-sizing: border-box;
   flex-direction: column;
 }
-.headerContainer {
+.container header {
   display: flex;
   align-items: center;
   width: 100%;
@@ -259,6 +260,11 @@ header {
 #logo img {
   height: 160px;
 }
+.header .navigation a {
+  color: #ffffff;
+  margin: 0 1rem;
+}
+
 nav {
   display: flex;
 }
@@ -316,7 +322,7 @@ nav ul li span {
 /* Hero section styles */
 #hero {
   text-align: center;
-  padding: 40px 0;
+  padding: 3rem 1rem;
 }
 
 #hero p {
@@ -327,9 +333,9 @@ nav ul li span {
   background-color: #d35400;
   color: #fff;
   border: none;
-  padding: 10px 20px;
+  padding: 0.5rem 1rem;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 1rem;
   border-radius: 2px;
 }
 
@@ -348,9 +354,11 @@ nav ul li span {
   flex-direction: column;
   flex-wrap: wrap;
   gap: 20px;
+  padding: 2rem 1rem;
 }
 
 #light article {
+  display: flex;
   flex: 1;
   width: 100%;
 }
@@ -361,6 +369,7 @@ nav ul li span {
 
 #light .carousel {
   display: flex;
+  gap: 1rem;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
@@ -370,8 +379,10 @@ nav ul li span {
   flex: 0 0 300px;
   margin-right: 20px;
   scroll-snap-align: start;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border-radius: 2px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  background: #ffffff;
+  padding: 1rem;
 }
 
 #light .topCard {
@@ -383,12 +394,15 @@ nav ul li span {
 
 #light .topCard h6 {
   flex: 2;
+  font-size: 1.25rem;
+  color: #3498db;
 }
 
 #light .topCard .visuel img {
   flex: 1;
   max-width: 100%;
   height: auto;
+  border-radius: 5px;
 }
 
 #light .middleCard {
@@ -423,23 +437,28 @@ nav ul li span {
 
 /* Spaces section styles */
 .spaces {
+  background: #f9f9f9;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  padding: 2rem 1rem;
 }
 
-.spaces .container {
+.space-block {
   flex: 1;
   min-width: 300px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 2px;
   padding: 20px;
   text-align: center;
+  margin-bottom: 1.5rem;
 }
 
-.spaces .container img {
+.space-block img {
   max-height: 300px;
   margin: 0 auto;
+  width: 100%;
+  border-radius: 5px;
 }
 
 .spaces .container1 {
@@ -468,8 +487,9 @@ nav ul li span {
 footer {
   background-color: #2e4053;
   color: #fff;
-  padding: 40px 0;
+  padding: 1rem;
   width: 100%;
+  text-align: center;
 }
 
 #footer {
@@ -570,6 +590,32 @@ footer {
   align-items: center;
   padding: 10px;
 }
+/* Boutons et Accessibilité */
+.btn-connexion,
+.btn-voir-plus,
+.btn-cta {
+  border: none;
+  padding: 0.5rem 1rem;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.btn-connexion {
+  background-color: #5dade2;
+}
+
+.btn-connexion:hover {
+  background-color: #48c9b0;
+}
+
+.btn-connexion:active {
+  background-color: #d35400;
+}
+
+.btn-voir-plus,
+.btn-cta {
+  background-color: #d35400;
+}
 
 /* Media queries for responsiveness */
 @media (max-width: 768px) {
@@ -603,5 +649,8 @@ footer {
 
   .spaces .container1 button span.ghost {
     display: none;
+  }
+  .hero h1 {
+    font-size: 2rem;
   }
 }
