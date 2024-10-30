@@ -58,21 +58,12 @@
             <div id="logo">
               <a href="index.html" aria-label="Accueil">
                 <picture>
+                  
                   <source
-                    media="(min-width: 1024px)"
-                    srcset="asset/logo-blanc.svg 1600w"
-                    sizes="1600px"
+                    media="(max-width: 600px)"
+                    srcset="asset/logo-small.svg"
                   />
-                  <source
-                    media="(min-width: 600px)"
-                    srcset="asset/logo-medium.jpg 1024w"
-                    sizes="1024px"
-                  />
-                  <source
-                    media="(min-width: 0px)"
-                    srcset="asset/logo-small.jpg 600w"
-                    sizes="600px"
-                  />
+                  
                   
                   <img
                     id="logo-black"
@@ -86,72 +77,67 @@
 
           <nav  class="navigation" role="navigation">
             <ul>
-              <li>
+              <!-- <li>
                 <a href="index.html" aria-label="Accueil"
-                  >Accueil
+                  ><h2>Accueil</h2>
                   <span><i class="fas fa-home"></i></span
                 ></a>
-              </li>
+              </li> -->
               <li>
-                <a href="#Categories" aria-label="catégories"
-                  ><h5>Catégories</h5>
+              <a href="#Categories" aria-label="catégories"
+                  <span><h2>Catégories</h2></span>
                   <span><i class="fas fa-th"></i></span
                 ></a>
               </li>
               
               <li>
                 <a href="espace-pro.html" aria-label="Espace professionnel"
-                  >Espace Pro
+                  ><span><h2>Espace Pro</h2></span>
                   <span><i class="fas fa-sign-in-alt"></i></span
                 ></a>
               </li>
               <li>
                 <a href="vie-locale.html" aria-label="vie locale"
-                  >Vie Locale
+                  ><span><h2>Vie Locale</h2></span>
                   <span><i class="fas fa-comments"></i></span
                 ></a>
               </li>
               <li>
                 <a href="favoris.html" aria-label="Favoris"
-                  ><h5>Favoris</h5>
+                  ><span><h2>Favoris</h2></span>
                   <span><i class="fas fa-star"></i></span
                 ></a>
               </li>
-              <li>
+              <!-- <li>
                 <a href="compte.html" aria-label="Mon Compte"
-                  >Mon Compte
+                  ><h2>Mon Compte</h2>
                   </a>
-              </li>
-              
-              <li >
+              </li> -->    
+            </ul>
+            <div>
                 <button class="btn-connexion" type="button" aria-label="Se connecter">
                   <a href="login.html"
                     ><span class="ghost">Se connecter</span></a
                   >
                 </button>
-                <span><i class="fas fa-user" id="user"></i></span>
-                <span><i class="fas fa-caret-down"></i></span>
-                </li>
-                
-              
-            </ul>
-            <div class="dropdown-menu">
+                <!-- <span><i class="fas fa-user" id="user"></i></span>
+                <span><i class="fas fa-caret-down"></i></span> -->
+                  
+            </div>
+           <!--  <div class="dropdown-menu">
                 <ul >
                   <li><a href="#">Profil</a></li>
                   <li><a href="#">Paramètres</a></li>
                   <li><a href="#">Déconnexion</a></li>
-                </ul></div>
+                </ul></div> -->
           </nav>
         </div>
         <!-- champs de recherche -->
-        <div class="search">
           <div class="formSearch">
-            <span><i class="fas fa-search"></i></span>
             <input
               class="formSearchInput"
               type="text"
-              placeholder="rechercher"
-              size="10"
+              placeholder="rechercher" 
               dirname="Rechercher"
             />
             <button>
@@ -162,7 +148,7 @@
               ></span>
             </button>
           </div>
-        </div>
+        
       </header>
       
       <main class="container">
@@ -237,7 +223,7 @@
                       >
                       <p>date de publication</p>
                       <p>cat</p>
-                      <span>50</span><span><i class="fas fa-star"></i></span
+                      <span>50</span><span><a href="favoris.html" aria-label="Favoris"<i class="fas fa-star"></i></a></span
                       ><span><i class="fas fa-share"></i></span>
                     </div></div
                 ></a>
@@ -277,8 +263,8 @@
                       >
                       <p>date de publication</p>
                       <p>cat</p>
-                      <span>50</span><span><i class="fas fa-star"></i></span
-                      ><span><i class="fas fa-share"></i></span>
+                      <span>50</span><a href="favoris.html" aria-label="Favoris"<span><i class="fas fa-star"></i></span
+                      ></a><span><i class="fas fa-share"></i></span>
                     </div></div
                 ></a>
               </div>
@@ -317,8 +303,11 @@
                       >
                       <p>date de publication</p>
                       <p>cat</p>
-                      <span>50</span><span><i class="fas fa-star"></i></span
-                      ><span><i class="fas fa-share"></i></span>
+                      <span>50</span>
+                      <a href="favoris.html" aria-label="Favoris"
+                      <span><i class="fas fa-star"></i></span
+                      ></a>
+                      <span><i class="fas fa-share"></i></span>
                     </div></div
                 ></a>
               </div>
@@ -361,8 +350,11 @@
                       >
                       <p>date de publication</p>
                       <p>cat</p>
-                      <span>50</span><span><i class="fas fa-star"></i></span
-                      ><span><i class="fas fa-share"></i></span>
+                      <span>50</span>
+                      <a href="favoris.html" aria-label="Favoris"
+                      <span><i class="fas fa-star"></i></span
+                      ></a>
+                      <span><i class="fas fa-share"></i></span>
                     </div></div
                 ></a>
               </div>
@@ -407,8 +399,11 @@
                       >
                       <p>date de publication</p>
                       <p>cat</p>
-                      <span>50</span><span><i class="fas fa-star"></i></span
-                      ><span><i class="fas fa-share"></i></span>
+                      <span>50</span>
+                      <a href="favoris.html" aria-label="Favoris"
+                      <span><i class="fas fa-star"></i></span
+                      ></a>
+                      <span><i class="fas fa-share"></i></span>
                     </div></div
                 ></a>
               </div>
@@ -451,8 +446,11 @@
                       >
                       <p>date de publication</p>
                       <p>cat</p>
-                      <span>50</span><span><i class="fas fa-star"></i></span
-                      ><span><i class="fas fa-share"></i></span>
+                      <span>50</span>
+                      <a href="favoris.html" aria-label="Favoris"
+                      <span><i class="fas fa-star"></i></span
+                      ></a>
+                      <span><i class="fas fa-share"></i></span>
                     </div></div
                 ></a>
               </div>
@@ -497,8 +495,11 @@
                       >
                       <p>date de publication</p>
                       <p>cat</p>
-                      <span>50</span><span><i class="fas fa-star"></i></span
-                      ><span><i class="fas fa-share"></i></span>
+                      <span>50</span>
+                      <a href="favoris.html" aria-label="Favoris"
+                      <span><i class="fas fa-star"></i></span
+                      ></a>
+                      <span><i class="fas fa-share"></i></span>
                     </div></div
                 ></a>
               </div>
@@ -569,7 +570,8 @@
                     >
                   </div>
                   <div><i class="fas fa-comment-alt"></i></div>
-                  <div><i class="fas fa-star"></i></div>
+                  <a href="favoris.html" aria-label="Favoris"
+                  <span><i class="fas fa-star"></i></span></a>
                   <div><i class="fas fa-share-alt"></i></div>
                 </div>
               </div>
@@ -851,18 +853,18 @@
               <h3>PauConnect</h3>
               <ul>
                 <li>
-                  <a href="#" aria-label="Mentions Légales"
+                  <a href="#mentions-legales.html" aria-label="Mentions Légales"
                     >Mentions légales
                     <span><i class="fas fa-copyright"></i></span
                   ></a>
                 </li>
                 <li>
-                  <a href="#" aria-label="COnditions d'utilisation du site"
+                  <a href="#a-propos.html" aria-label="A propos"
                     >Conditions d'utilisation du site</a
                   >
                 </li>
                 <li>
-                  <a href="#" aria-label="Politique de confidentialité"
+                  <a href="#politique-confidentialite.html" aria-label="Politique de confidentialité"
                     >Politique de confidentialité</a
                   >
                 </li>
@@ -872,10 +874,10 @@
               <h3>Nos services</h3>
               <ul>
                 <li>
-                  <a href="#" aria-label="Nos partenaires">Nos partenaires</a>
+                  <a href="#partenaires.html" aria-label="Nos partenaires">Nos partenaires</a>
                 </li>
                 <li>
-                  <a href="#" aria-label="Rejoignez-nous">Rejoignez-nous</a>
+                  <a href="#recrutement.html" aria-label="Rejoignez-nous">Rejoignez-nous</a>
                 </li>
               </ul>
             </div>
@@ -883,13 +885,13 @@
               <h3>Assistance</h3>
               <ul>
                 <li>
-                  <a href="#" aria-label="Aide"
+                  <a href="#faq.html" aria-label="Aide"
                     ><span class="ghost">Centre d'aide</span>
                     <span><i class="fas fa-question-circle"></i></span
                   ></a>
                 </li>
                 <li>
-                  <a href="#" aria-label="Nous contacter"
+                  <a href="#contact.html" aria-label="Nous contacter"
                     ><span class="ghost">Nous contacter</span>
                     <span><i class="far fa-envelope"></i></span
                   ></a>
