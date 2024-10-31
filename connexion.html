@@ -1,38 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/bc83aad1fd.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="connexion.css" />
     <title>Document</title>
   </head>
   <body>
-    <button id="openModalBtn">Se connecter</button>
+    <button id="openModalBtn" class="cta-button">Se connecter</button>
     <div id="modal" class="modal">
       <div class="modal-content">
         <span class="close">&times;</span>
         <h2>Se connecter</h2>
         <form action="">
-          <input type="email" id="email" name="email" placeholder="email" />
+          <label for="email">Adresse e-mail :</label>
           <input
-            type="password"
-            id="password"
-            name="password"
-            placeholder="Password"
+            type="email"
+            id="email"
+            name="email"
+            pattern="[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+.[a-zA-Z.]{2,15}"
+            placeholder="joe.do@xxxx.com"
+            aria-describedby="email_error"
+            required
           />
-          <input type="submit" value="Login" />
+          <span id="email_error" class="error" aria-live="polite"></span
+          ><br /><br />
+          <label for="password">Mot de passe:</label>
+          <div class="password-placeholder">
+            <input
+              type="password"
+              id="password"
+              name="password"
+              pattern="/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/"
+              placeholder="ab1A23-4BcdCD5e"
+              aria-describedby="password_error"
+            />
+            <i class="fas fa-eye" id="togglePassword"></i>
+          </div>
+          <span id="password_error" class="error" aria-live="polite"></span>
+          <div class="remember-me">
+            <input type="checkbox" id="rememberMe" name="rememberMe" />
+            <label for="rememberMe">Se souvenir de moi</label>
+          </div>
+
+          <input type="submit" value="Connexion" />
+          <a href="#" id="forgotPassword">Mot de passe oublié ?</a>
         </form>
+        <div
+          class="caption-container"
+          aria-label="Information about password requirements"
+        >
+          <i class="fas fa-info-circle" aria-hidden="true"></i>
+          <p class="caption" aria-hidden="true">
+            Mot de passe formé d'un minimum de 8 caractères, au moins une lettre
+            majuscule, au moins une lettre minuscule, au moins un chiffre et au
+            moins un caractère spécial.
+          </p>
+        </div>
         <p>Ou vous connecter avec:</p>
-        <button>Google <i></i></button>
-        <button>
-          <meta
-            property="og:image"
-            content="https://picsum.photos/id/684/1200/630"
-          />Facebook <i>fa-facebook-f</i>
-        </button>
+        <div class="social-buttons">
+          <button>
+            <a
+              href="https://accounts.google.com/"
+              aria-label=" se connecter avec Google"
+            >
+              <i class="fab fa-google"></i>
+            </a>
+          </button>
+          <button>
+            <a
+              href="https://www.facebook.com/login/"
+              aria-label=" se connecter avec Facebook"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+          </button>
+        </div>
+
         <p>
-          Vous n'avez pas encore de compte ? <a href="#"> Créer un compte</a>
+          Vous n'avez pas encore de compte ? <a href="#">S'inscrire ici.</a>
         </p>
+        <br />
+        <a href="/index.html">Retour à la page d'accueil PauConnect</a>
       </div>
     </div>
   </body>
