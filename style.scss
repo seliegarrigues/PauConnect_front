@@ -158,7 +158,7 @@ gap: 20px;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  
   box-sizing: border-box;
   align-items: center;
   justify-content: space-around;
@@ -166,7 +166,7 @@ gap: 20px;
 
 main section {
   max-width: 1200px;
-  margin: 0 auto;
+ 
 }
 
 .column {
@@ -186,7 +186,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding: 1rem 0rem;
   width: 100%;
   box-sizing: border-box;
   flex-direction: column;
@@ -290,7 +290,7 @@ border: 1px solid #e0e2e5;
 // Hero section styles
 #hero {
   text-align: center;
-  padding: 3rem 1rem;
+ 
   
   p {
   margin-bottom: 20px;
@@ -313,7 +313,7 @@ border: 1px solid #e0e2e5;
 
 #hero .visuel img {
   max-width: 1200px;
-  margin: 0 auto;
+  
 }
 // Light section styles
 #light {
@@ -321,7 +321,7 @@ border: 1px solid #e0e2e5;
   flex-direction: column;
   flex-wrap: wrap;
   gap: 20px;
-  padding: 2rem 1rem;
+ 
 }
 
   #light article {
@@ -340,7 +340,7 @@ border: 1px solid #e0e2e5;
   
   #light .carousel {
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
@@ -348,7 +348,7 @@ border: 1px solid #e0e2e5;
   
   #light .card {
     flex: 0 0 33%;
-    margin-right: 20px;
+   
     scroll-snap-align: start;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
@@ -360,7 +360,7 @@ border: 1px solid #e0e2e5;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    
   }
   
   #light .topCard h6 {
@@ -376,15 +376,13 @@ border: 1px solid #e0e2e5;
     border-radius: 5px;
   }
   
-  #light .middleCard {
-    padding: 10px;
-  }
+ 
   
   #light .lowCard {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px;
+   
   }
   
   #light .detail1Card {
@@ -418,24 +416,24 @@ border: 1px solid #e0e2e5;
   // ...  section styles ...
   .space-block {
     flex: 1;
-    min-width: 300px;
+   
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 2px;
     padding: 20px;
     text-align: center;
-    margin-bottom: 1.5rem;
+   
   }
   
   .space-block img {
     max-height: 300px;
-    margin: 0 auto;
+   
     width: 100%;
     border-radius: 5px;
   }
   
-  .spaces .container1 {
+  .spaces .category {
     flex: 1;
-    min-width: 300px;
+    /* min-width: 300px; */
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -491,7 +489,7 @@ footer {
   
   .section_footer {
   
-    min-width: 200px;
+  
     display: flex;
     justify-content: space-evenly;
   }
@@ -665,9 +663,7 @@ footer {
       width: 66.66%;
       padding: 10px;
   
-      p {
-        margin: 0;
-      }
+     
   
       #welcome {
         display: none;
@@ -686,9 +682,7 @@ footer {
   }
 /* Media queries for responsiveness */
 @media screen and (max-width: 768px) {
-  body {
-    padding: 0 10px;
-  }
+ 
 
   .container {
     flex-direction: column;

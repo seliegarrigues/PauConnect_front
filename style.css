@@ -145,7 +145,6 @@ label {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
   box-sizing: border-box;
   align-items: center;
   justify-content: space-around;
@@ -153,7 +152,6 @@ label {
 
 main section {
   max-width: 1200px;
-  margin: 0 auto;
 }
 
 .column {
@@ -172,7 +170,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding: 1rem 0rem;
   width: 100%;
   box-sizing: border-box;
   flex-direction: column;
@@ -275,7 +273,6 @@ nav ul li span i {
 
 #hero {
   text-align: center;
-  padding: 3rem 1rem;
 }
 #hero p {
   margin-bottom: 20px;
@@ -296,7 +293,6 @@ nav ul li span i {
 /* Hero section styles */
 #hero .visuel img {
   max-width: 1200px;
-  margin: 0 auto;
 }
 
 #light {
@@ -304,7 +300,6 @@ nav ul li span i {
   flex-direction: column;
   flex-wrap: wrap;
   gap: 20px;
-  padding: 2rem 1rem;
 }
 
 #light article {
@@ -323,7 +318,7 @@ nav ul li span i {
 
 #light .carousel {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
@@ -331,7 +326,6 @@ nav ul li span i {
 
 #light .card {
   flex: 0 0 33%;
-  margin-right: 20px;
   scroll-snap-align: start;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
@@ -343,7 +337,6 @@ nav ul li span i {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
 }
 
 #light .topCard h6 {
@@ -359,15 +352,10 @@ nav ul li span i {
   border-radius: 5px;
 }
 
-#light .middleCard {
-  padding: 10px;
-}
-
 #light .lowCard {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10px;
 }
 
 #light .detail1Card {
@@ -400,24 +388,21 @@ nav ul li span i {
 
 .space-block {
   flex: 1;
-  min-width: 300px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 2px;
   padding: 20px;
   text-align: center;
-  margin-bottom: 1.5rem;
 }
 
 .space-block img {
   max-height: 300px;
-  margin: 0 auto;
   width: 100%;
   border-radius: 5px;
 }
 
-.spaces .container1 {
+.spaces .category {
   flex: 1;
-  min-width: 300px;
+  /* min-width: 300px; */
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -470,7 +455,6 @@ footer {
 }
 
 .section_footer {
-  min-width: 200px;
   display: flex;
   justify-content: space-evenly;
 }
@@ -632,9 +616,6 @@ btn-cte:active {
   width: 66.66%;
   padding: 10px;
 }
-#personalisation .etat-txt p {
-  margin: 0;
-}
 #personalisation .etat-txt #welcome {
   display: none;
 }
@@ -644,9 +625,6 @@ btn-cte:active {
 
 /* Media queries for responsiveness */
 @media screen and (max-width: 768px) {
-  body {
-    padding: 0 10px;
-  }
   .container {
     flex-direction: column;
     align-items: center;
