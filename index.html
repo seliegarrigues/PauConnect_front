@@ -59,15 +59,11 @@
               <a href="index.html" aria-label="Accueil">
                 <picture>
                   
-                  <source
-                    media="(max-width: 600px)"
-                    srcset="asset/logo-small.svg"
-                  />
-                  
+            
                   
                   <img
                     id="logo-black"
-                    src="asset/LOGO-black.svg"
+                    src="asset/logo-blanc.svg"
                     alt="logo PauConnect  fond clair"
                     loading="lazy"
                   /> </picture
@@ -138,17 +134,30 @@
             <button>
               <span class="formSubmitInputText">Rechercher</span>
               <!-- loupe pour version mobile -->
-              <span class="formSubmitInputIcon"
-                ><i class="fas fa-search"></i
-              ></span>
+              <span class="formSubmitInputIcon"><i class="fas fa-search"></i></span>
             </button>
           </div>
         
       </header>
       
       <main class="container">
-        <!-- Section Hero -->
-       
+        
+        <section id="personalisation">
+          <div class="on-off">
+            <label class="switch">
+              <input type="checkbox" id="switch" />
+              <span class="slider"></span>
+            </label>
+          </div>
+        
+          <div class="etat-txt">
+            <p>Mon PauConnect </p>
+            <p id="welcome">Bienvenue M.</p>
+            <p>Personnalisez votre expérience PauConnect et retrouvez des contenus sélectionnés pour vous, adaptés à vos thématiques favorites</p>
+          </div>
+        </section>
+        
+       <!-- Section Hero -->
         <section id="hero">
            <h1>Ma ville, Mes infos, Ma communauté</h1>
           <p>
@@ -214,11 +223,11 @@
                       <a
                         href="#articledetailpage1"
                         aria-label="vers les details de l'article"
-                        ><button class="btn-voir-plus">Lire la suite </</button></a
+                        ><button class="btn-voir-plus">Lire la suite </button></a
                       >
                       <p>date de publication</p>
                       <p>cat</p>
-                      <span>50</span><span><a href="favoris.html" aria-label="Favoris"<i class="fas fa-star"></i></a></span
+                      <span>50</span><span><a href="favoris.html" aria-label="Favoris"></a><i class="fas fa-star"></i></a></span
                       ><span><i class="fas fa-share"></i></span>
                     </div></div
                 ></a>
@@ -491,7 +500,7 @@
                       <p>date de publication</p>
                       <p>cat</p>
                       <span>50</span>
-                      <a href="favoris.html" aria-label="Favoris"
+                      <a href="favoris.html" aria-label="Favoris"></a>
                       <span><i class="fas fa-star"></i></span
                       ></a>
                       <span><i class="fas fa-share"></i></span>
@@ -527,7 +536,7 @@
                     brève description.
                   </p>
                 </div>
-                <div class="lowCard">
+                <div class="lowCard2">
                   <div>
                     <a
                       href="#cieDetailPage"
@@ -535,9 +544,9 @@
                       ><button><span>En Savoir plus</span></button></a
                     >
                   </div>
-                  <div><i class="fas fa-comment-alt"></i></div>
-                  <div><i class="fas fa-star"></i></div>
-                  <div><i class="fas fa-share-alt"></i></div>
+                  <div><a href="#"><i class="fas fa-comment-alt"></i></a>
+                  <a href="#"><i class="fas fa-star"></i></a>
+                  <a href=""><i class="fas fa-share-alt"></i></a></div>
                 </div>
               </div>
               <div class="businessCard">
@@ -565,8 +574,7 @@
                     >
                   </div>
                   <div><i class="fas fa-comment-alt"></i></div>
-                  <a href="favoris.html" aria-label="Favoris"
-                  <span><i class="fas fa-star"></i></span></a>
+                  <a href="favoris.html" aria-label="Favoris"><span><i class="fas fa-star"></i></span></a>
                   <div><i class="fas fa-share-alt"></i></div>
                 </div>
               </div>
@@ -583,8 +591,7 @@
                 <div class="middleCard">
                   <p>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    brève description.
-                  </p>
+                    brève description.</p>
                 </div>
                 <div class="lowCard2">
                   <div>
@@ -811,9 +818,9 @@
               </form>
             </div>
             <!-- Social media icons section -->
-            <div class="section_footer">
+            <div class="section_footer social-icons">
               <h3>Suivez-nous sur les réseaux sociaux</h3>
-              <ul class="social-icons">
+              <ul class="rs">
                 <li>
                   <a href="#" aria-label="Facebook"
                     ><i class="fab fa-facebook-f"></i
