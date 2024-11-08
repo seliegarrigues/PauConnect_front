@@ -106,21 +106,49 @@ a:hover {
 button,
 input[type=button],
 input[type=submit] {
-  background-color: #2e4053;
-  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 42px;
+  padding: 10px;
+  background-color: #2E4053;
   border: none;
-  padding: 10px 20px;
-  cursor: pointer;
+  border-radius: 5px;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  color: white;
+  font-family: "Open Sans", sans-serif;
   font-size: 16px;
-  border-radius: 2px;
+  font-weight: bold;
+  box-shadow: 0 2px 3px rgba(46, 64, 83, 0.5);
+  cursor: pointer;
+  gap: 10px;
+  /* .button-text {
+    margin-right: 10px;
+  } */
+}
+button.hover-button:hover,
+input[type=button].hover-button:hover,
+input[type=submit].hover-button:hover {
+  background-color: #D35400;
+}
+button.active-button:active,
+input[type=button].active-button:active,
+input[type=submit].active-button:active {
+  background-color: #48C9B0;
+}
+button.disabled-button,
+input[type=button].disabled-button,
+input[type=submit].disabled-button {
+  background-color: #549CCB;
+  cursor: not-allowed;
 }
 
-button:hover,
-input[type=button]:hover,
-input[type=submit]:hover {
-  background-color: #d35400;
-}
-
+/* button:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover { */
+/* background-color: #d35400; */
+/* } */
 input,
 textarea,
 select {
@@ -130,6 +158,7 @@ select {
   border: 1px solid #e0e2e5;
   border-radius: 2px;
   font-size: 16px;
+  min-width: 290px;
 }
 
 label {
@@ -623,6 +652,66 @@ btn-cte:active {
   display: block;
 }
 
+.publish {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  /* width: 100%; */
+  max-width: 1200px;
+}
+
+.publish h1 {
+  text-align: center;
+}
+
+.upload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 20px;
+  border: 1px solid #2e4053;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.upload p {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.upload-title, .content-title, .content-category {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.content-button {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.save {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding-bottom: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 /* Media queries for responsiveness */
 @media screen and (max-width: 768px) {
   .container {
@@ -725,6 +814,7 @@ btn-cte:active {
     flex-direction: column;
   }
   .rs {
+    display: flex;
     flex-direction: row;
   }
 }/*# sourceMappingURL=style.css.map */

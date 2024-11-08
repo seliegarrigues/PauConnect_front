@@ -12,6 +12,7 @@ $h6-font-size: 1rem;
 $body-font-size: 1rem;
 $caption-font-size: 0.875rem;
 
+@import 'variables_mixins';
 // Reset
 video{
  
@@ -69,9 +70,6 @@ table {
   border-spacing: 0;
 }
 // Base styles//
-
-
-  
   h1 {
   font-size: $h1-font-size;
   }
@@ -100,6 +98,7 @@ caption{
   color: white;
 }
 
+
 img {
   max-width: 100%;
   height: auto;
@@ -119,20 +118,14 @@ a:hover {
 button,
 input[type="button"],
 input[type="submit"] {
-  background-color: #2e4053;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  font-size: 16px;
-  border-radius: 2px;
+ @include button-styles($default-color, 5px)
 }
 
-button:hover,
+/* button:hover,
 input[type="button"]:hover,
-input[type="submit"]:hover {
-  background-color: #d35400;
-}
+input[type="submit"]:hover { */
+  /* background-color: #d35400; */
+/* } */
 
 input,
 textarea,
@@ -143,6 +136,7 @@ select {
   border: 1px solid #e0e2e5;
   border-radius: 2px;
   font-size: 16px;
+  min-width: 290px;
 }
 
 label {
@@ -675,8 +669,62 @@ footer {
       display: block;
     }
   }
+.publish
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  /* width: 100%; */
+max-width: 1200px;
+}
+.publish h1 {
+  text-align: center;
+}
   
-  // Mobile-first
+.upload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 20px ;
+  border:1px solid #2e4053;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+}
+.upload p{
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.upload-title, .content-title, .content-category{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.content-button {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+    align-items: center; 
+    width: 100%;     
+}
+.save {
+  display: flex;
+ gap: 10px ;
+ align-items: center;
+ padding-bottom: 20px ;
+ flex-wrap: wrap;
+ justify-content: center;
+}
+// Mobile-first
   @media (min-width: 768px) {
     // Add your desktop styles here
   }
@@ -792,6 +840,7 @@ footer {
     flex-direction: column;
   }
   .rs {
+    display: flex;
     flex-direction: row;
   }
 }

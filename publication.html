@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/bc83aad1fd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body class="publish">
+    <header>
+        <div class="container header">
+            <div class="logo-nav-wrapper">
+              
+                <a href="index.html" aria-label="Accueil">
+                                    <img
+                      id="logo-small"
+                      src="logo-small.svg"
+                      alt="logo PauConnect  fond clair"
+                      loading="lazy"
+                    /> 
+                </a>
+              
+            </div>
+  
+            <nav  class="navigation" role="navigation">
+              <ul>
+                
+                <li>
+                <a href="#Categories" aria-label="catégories" >
+                    <!-- <span><h2>Catégories</h2></span> -->
+                    <span><i class="fas fa-th"></i></span>
+                 </a>
+                </li>
+                
+                <li>
+                  <a href="espace-pro.html" aria-label="Espace professionnel">
+                    <!-- <span><h2>Espace Pro</h2></span> -->
+                    <span><i class="fas fa-sign-in-alt"></i></span
+                  ></a>
+                </li>
+                <li>
+                  <a href="vie-locale.html" aria-label="vie locale"
+                    >
+                    <!-- <span><h2>Vie Locale</h2></span> -->
+                    <span><i class="fas fa-comments"></i></span
+                  ></a>
+                </li>
+                <li>
+                  <a href="favoris.html" aria-label="Favoris"
+                    >
+                    <!-- <span><h2>Favoris</h2></span> -->
+                    <span><i class="fas fa-star"></i></span
+                  ></a>
+                </li>
+                <!-- <li>
+                  <a href="compte.html" aria-label="Mon Compte"
+                    ><h2>Mon Compte</h2>
+                    </a>
+                </li> -->    
+              </ul>
+              <div>
+                <button class="default-button hover-button" aria-label="connexion">
+                  <span class="button-text">Text</span>
+                  <i class="button-icon fa-solid fa-user"></i>
+                </button>
+                  
+                  <button class="default-button hover-button active-button">
+                    <span class="formSubmitInputText">Rechercher</span>
+                    <!-- loupe pour version mobile -->
+                    <span class="formSubmitInputIcon"><i class="fas fa-search"></i></span>
+                  </button>
+                  <!-- <span><i class="fas fa-caret-down"></i></span> -->
+                    
+              </div>
+             <!--  <div class="dropdown-menu">
+                  <ul >
+                    <li><a href="#">Profil</a></li>
+                    <li><a href="#">Paramètres</a></li>
+                    <li><a href="#">Déconnexion</a></li>
+                  </ul></div> -->
+            </nav>
+          <!-- </div> -->
+          <!-- champs de recherche -->
+            <!-- <div class="formSearch">
+              <input
+                class="formSearchInput"
+                type="text"
+                placeholder="rechercher" 
+                dirname="Rechercher"
+              /> -->
+              
+            <!-- </div> -->
+          
+    </header>
+    <section class="fil">
+        <p>Espace professionnel / formulaire de publication</p>
+    </section>
+    <div class="GS">
+        <button class="default-button hover-button active-button">
+            <span class="button-text">Gérer</span>
+            <i class=" button-icon fa-solid fa-caret-down"></i>
+          </button>
+          <button class="default-button hover-button active-button">
+            <span class="button-text">Suivant</span>
+            <i class=" button-icon fa-solid fa-arrow-right"></i>         
+         </button>
+    </div>
+    <div class="style"></div>
+    <main class="publish">
+        <h1>Formulaire de publication</h1>
+        <section class="upload">
+            <div class="upload-title">
+                <i class="fas fa-images"></i>
+                <h3>Image ou media</h3>
+            </div>
+            <p>Charger ou glisser une image de 1920 x1080 pixels et privilégier le format webp</p>
+            <div class="content-button">
+                <button class="default-button hover-button active-button">
+                  <span class="button-text">Ajouter une image</span>
+                  <i class="fas fa-plus button-icon"></i>
+                </button>
+                <button class="default-button hover-button active-button">
+                  <span class="button-text">Ajouter une vidéo</span>
+                  <i class="fab fa-youtube button-icon"></i>
+                </button>
+              </div>
+              <div class="content-image">
+                <!-- image preview -->
+              </div>
+           
+        </section>
+        <section class="content">
+            <div class="content-title">
+                <i class="fas fa-heading"></i>
+                <input
+                  class="content-input"
+                  type="text"
+                  placeholder="Titre de votre publication" 
+                  dirname="Titre de votre publication"
+                />
+  
+            </div>
+            <textarea
+              class="content-textarea"
+              name="content"
+              placeholder="Rédigez ici votre publication. Vous pouvez ajouter des hashtags précédées de la touche # et des mentions précédées de la touche @"
+              aria-label="Écrivez votre article ici"
+            ></textarea>
+            <div class="content-category">
+                <p>Catégories</p>
+                <i class=" button-icon  fa-solid fa-caret-down"></i>
+
+            </div>
+            
+        </section>
+        <section class="save">
+            <button class="default-button hover-button active-button">
+                <span class="button-text">Enregistrer</span>
+                <i class="fas fa-save button-icon"></i>
+              </button>
+            <button class="default-button hover-button active-button">
+                <span class="button-text">Annuler</span>
+                <i class="fas fa-times button-icon"></i>
+              </button>
+        </section>
+
+
+    </main>
+    <footer>
+        <div class="container footer" id="footer">
+            <div class="footer1">
+              
+              
+                  
+               
+              <!-- Social media icons section -->
+              <div class="section_footer social-icons">
+                <h3>Suivez-nous sur les réseaux sociaux</h3>
+                <ul class="rs">
+                  <li>
+                    <a href="#" aria-label="Facebook"
+                      ><i class="fab fa-facebook-f"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="#" aria-label="YouTube"
+                      ><i class="fab fa-youtube"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="#" aria-label="Instagram"
+                      ><i class="fab fa-instagram"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="#" aria-label="LinkedIn"
+                      ><i class="fab fa-linkedin-in"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="#" aria-label="Twitter"
+                      ><i class="fab fa-twitter"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+  
+            <div class="footer2">
+              <div class="section_footer">
+                <h3>PauConnect</h3>
+                <ul>
+                  <li>
+                    <a href="#mentions-legales.html" aria-label="Mentions Légales"
+                      ><!-- Mentions légales -->
+                      <span><i class="fas fa-copyright"></i></span
+                    ></a>
+                  </li>
+                  <!-- <li>
+                    <a href="#a-propos.html" aria-label="A propos"
+                      >Conditions d'utilisation du site</a
+                    >
+                  </li> -->
+                  <!-- <li>
+                    <a href="#politique-confidentialite.html" aria-label="Politique de confidentialité"
+                      >Politique de confidentialité</a
+                    >
+                  </li> -->
+                </ul>
+              </div>
+              <!-- <div class="section_footer">
+                <h3>Nos services</h3>
+                <ul>
+                  <li>
+                    <a href="#partenaires.html" aria-label="Nos partenaires">Nos partenaires</a>
+                  </li>
+                  <li>
+                    <a href="#recrutement.html" aria-label="Rejoignez-nous">Rejoignez-nous</a>
+                  </li>
+                </ul>
+              </div> -->
+              <div class="section_footer">
+                <!-- <h3>Assistance</h3> -->
+                <ul>
+                  <li>
+                    <a href="#faq.html" aria-label="Aide"
+                      >
+                      <!-- <span class="ghost">Centre d'aide</span> -->
+                      <span><i class="fas fa-question-circle"></i></span
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="#contact.html" aria-label="Nous contacter"
+                      >
+                      <!-- <span class="ghost">Nous contacter</span> -->
+                      <span><i class="far fa-envelope"></i></span
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+    </footer>
+
+</body>
+</html>
