@@ -7,17 +7,41 @@
       src="https://kit.fontawesome.com/bc83aad1fd.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="connexion.css" />
+    <link rel="stylesheet" href="ouvriruncompte.css" />
     <title>Document</title>
   </head>
   <body>
-    <button id="openModalBtn" class="cta-button">Se connecter</button>
+    <button id="openModalBtn" class="cta-button">Créer un compte</button>
     <div id="modal" class="modal">
       <div class="modal-content">
         <span class="close">&times;</span>
-        <h2>Mon compte PauConnect</h2>
+        <h2>Votre Compte PauConnect</h2>
         <form action="">
-          <label for="email">Adresse e-mail :</label>
+          <label for="surname">Prénom :</label>
+          <input
+            type="text"
+            id="surname"
+            name="surname"
+            pattern="[a-z]{3,10}"
+            placeholder="Joe"
+            aria-describedby="surname_error"
+            required
+          />
+          <span id="surname_error" class="error" aria-live="polite"></span
+          ><br /><br />
+          <label for="name">Nom d'usage* :</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            pattern="[a-zA-Z]{2,15}"
+            placeholder="DO"
+            aria-describedby="name_error"
+            required
+          />
+          <span id="name_error" class="error" aria-live="polite"></span
+          ><br /><br />
+          <label for="email">Adresse e-mail* :</label>
           <input
             type="email"
             id="email"
@@ -42,13 +66,26 @@
             <i class="fas fa-eye" id="togglePassword"></i>
           </div>
           <span id="password_error" class="error" aria-live="polite"></span>
+          <label for="password">Confirmation du mot de passe:</label>
+          <div class="password-placeholder">
+            <input
+              type="password"
+              id="passwordconfirmation"
+              name="password"
+              pattern="/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/"
+              placeholder="ab1A23-4BcdCD5e"
+              aria-describedby="password_error"
+            />
+            <i class="fas fa-eye" id="togglePassword"></i>
+          </div>
+          <span id="passwordconfirmation_error" class="error" aria-live="polite"></span>
           <div class="remember-me">
             <input type="checkbox" id="rememberMe" name="rememberMe" />
-            <label for="rememberMe">Se souvenir de moi</label>
+            <label for="rememberMe">J'accepte les Conditions d'application d'utilisation du site</label>
           </div>
 
-          <input type="submit" value="Se connecter" />
-          <a href="#" id="forgotPassword">Mot de passe oublié ?</a>
+          <input type="submit" value="Valider la création du compte" />
+          <a href="#" id="alreadyPassword">j'ai déjà un compte</a>
         </form>
         <div
           class="caption-container"
@@ -61,7 +98,7 @@
             moins un caractère spécial.
           </p>
         </div>
-        <p>Ou vous connecter avec:</p>
+        <p>Ou créer un compte avec:</p>
         <div class="social-buttons">
           <button>
             <a
@@ -81,7 +118,7 @@
         </div>
 
         <p>
-          Vous n'avez pas encore de compte ? <a href="#">S'inscrire ici.</a>
+         Me connecter à mon compte existant <a href="#">cliquez ici.</a>
         </p>
         <br />
         <a href="/index.html">Retour à la page d'accueil PauConnect</a>
