@@ -1,129 +1,90 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      src="https://kit.fontawesome.com/bc83aad1fd.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="ouvriruncompte.css" />
-    <title>Document</title>
-  </head>
-  <body>
-    <button id="openModalBtn" class="cta-button">Créer un compte</button>
-    <div id="modal" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>Votre Compte PauConnect</h2>
-        <form action="">
-          <label for="surname">Prénom :</label>
-          <input
-            type="text"
-            id="surname"
-            name="surname"
-            pattern="[a-z]{3,10}"
-            placeholder="Joe"
-            aria-describedby="surname_error"
-            required
-          />
-          <span id="surname_error" class="error" aria-live="polite"></span
-          ><br /><br />
-          <label for="name">Nom d'usage* :</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            pattern="[a-zA-Z]{2,15}"
-            placeholder="DO"
-            aria-describedby="name_error"
-            required
-          />
-          <span id="name_error" class="error" aria-live="polite"></span
-          ><br /><br />
-          <label for="email">Adresse e-mail* :</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            pattern="[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+.[a-zA-Z.]{2,15}"
-            placeholder="joe.do@xxxx.com"
-            aria-describedby="email_error"
-            required
-          />
-          <span id="email_error" class="error" aria-live="polite"></span
-          ><br /><br />
-          <label for="password">Mot de passe:</label>
-          <div class="password-placeholder">
-            <input
-              type="password"
-              id="password"
-              name="password"
-              pattern="/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/"
-              placeholder="ab1A23-4BcdCD5e"
-              aria-describedby="password_error"
-            />
-            <i class="fas fa-eye" id="togglePassword"></i>
-          </div>
-          <span id="password_error" class="error" aria-live="polite"></span>
-          <label for="password">Confirmation du mot de passe:</label>
-          <div class="password-placeholder">
-            <input
-              type="password"
-              id="passwordconfirmation"
-              name="password"
-              pattern="/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/"
-              placeholder="ab1A23-4BcdCD5e"
-              aria-describedby="password_error"
-            />
-            <i class="fas fa-eye" id="togglePassword"></i>
-          </div>
-          <span id="passwordconfirmation_error" class="error" aria-live="polite"></span>
-          <div class="remember-me">
-            <input type="checkbox" id="rememberMe" name="rememberMe" />
-            <label for="rememberMe">J'accepte les Conditions d'application d'utilisation du site</label>
-          </div>
 
-          <input type="submit" value="Valider la création du compte" />
-          <a href="#" id="alreadyPassword">j'ai déjà un compte</a>
-        </form>
-        <div
-          class="caption-container"
-          aria-label="Information about password requirements"
-        >
-          <i class="fas fa-info-circle" aria-hidden="true"></i>
-          <p class="caption" aria-hidden="true">
-            Mot de passe formé d'un minimum de 8 caractères, au moins une lettre
-            majuscule, au moins une lettre minuscule, au moins un chiffre et au
-            moins un caractère spécial.
-          </p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+  <script src="https://kit.fontawesome.com/bc83aad1fd.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="ouvriruncompte.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <button id="openModalBtn" class="cta-button">Créer un compte</button>
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Votre Compte PauConnect</h2>
+      <form action="">
+        <label for="surname">Prénom :</label>
+        <input type="text" id="surname" name="surname" pattern="[a-zA-Z]{3,10}" placeholder="Joe"
+          aria-describedby="surname_error" required />
+        <span id="surname_error" class="error" aria-live="polite"></span><br /><br />
+        <label for="name">Nom d'usage* :</label>
+        <input type="text" id="name" name="name" pattern="[a-zA-Z]{2,15}" placeholder="DO" aria-describedby="name_error"
+          required />
+        <span id="name_error" class="error" aria-live="polite"></span><br /><br />
+        <label for="email">Adresse e-mail* :</label>
+        <input type="email" id="email" name="email" pattern="[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+.[a-zA-Z.]{2,15}"
+          placeholder="joe.do@xxxx.com" aria-describedby="email_error" required />
+        <span id="email_error" class="error" aria-live="polite"></span><br /><br />
+        <label for="password">Mot de passe:</label>
+        <div class="password-placeholder">
+          <input type="password" id="password" name="password"
+            pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[#?!@$%^&*\-]).{8,}$" placeholder="ab1A23-4BcdCD5e"
+            aria-describedby="password_error" />
+          <i class="fas fa-eye" id="togglePassword"></i>
         </div>
-        <p>Ou créer un compte avec:</p>
-        <div class="social-buttons">
-          <button>
-            <a
-              href="https://accounts.google.com/"
-              aria-label=" se connecter avec Google"
-            >
-              <i class="fab fa-google"></i>
-            </a>
-          </button>
-          <button>
-            <a
-              href="https://www.facebook.com/login/"
-              aria-label=" se connecter avec Facebook"
-              ><i class="fab fa-facebook-f"></i
-            ></a>
-          </button>
+        <span id="password_error" class="error" aria-live="polite"></span>
+        <label for="passwordconfirmation">Confirmation du mot de passe:</label>
+        <div class="password-placeholder">
+          <input type="password" id="passwordconfirmation" name="passwordconfirmation"
+            pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[#?!@$%^&*\-]).{8,}$" placeholder="ab1A23-4BcdCD5e"
+            aria-describedby="passwordconfirmation_error" />
+          <i class="fas fa-eye" id="togglePasswordConfirmation"></i>
+        </div>
+        <span id="passwordconfirmation_error" class="error" aria-live="polite"></span>
+        <div class="remember-me">
+          <input type="checkbox" id="rememberMe" name="rememberMe" />
+          <label for="rememberMe">Se souvenir de moi</label>
         </div>
 
-        <p>
-         Me connecter à mon compte existant <a href="#">cliquez ici.</a>
+        <input type="submit" value="Valider la création du compte" />
+        <a href="connexion.html" id="alreadyPassword">j'ai déjà un compte</a>
+      </form>
+      <div class="caption-container" aria-label="Information about password requirements">
+        <i class="fas fa-info-circle" aria-hidden="true"></i>
+        <p class="caption" aria-hidden="true">
+          Mot de passe formé d'un minimum de 8 caractères, au moins une lettre
+          majuscule, au moins une lettre minuscule, au moins un chiffre et au
+          moins un caractère spécial.
         </p>
-        <br />
-        <a href="/index.html">Retour à la page d'accueil PauConnect</a>
       </div>
+      <p>Ou créer un compte avec:</p>
+      <div class="social-buttons">
+        <button class="g-signin2" data-width="300" data-height="200" data-longtitle="true" data-onsuccess="onSignIn">
+          <a href="https://accounts.google.com/" aria-label=" se connecter avec Google">
+            <i class="fab fa-google"></i>
+          </a>
+        </button>
+        <div id="fb-root"></div>
+        <button class="fb-login-button" data-max-rows="1" data-size="medium" data-button-type="continue_with"
+          data-width="100%" data-scope="public_profile,email" data-auto-logout-link="true" data-use-continue-as="true">
+          <a href="https://www.facebook.com/v21.0/dialog/oauth?" aria-label=" se connecter avec Facebook"><i
+              class="fab fa-facebook-f" ></i></a>
+        </button>
+      </div>
+
+      <p>
+        Me connecter à mon compte existant <a href="connexion.html">cliquez ici.</a>
+      </p>
+      <br />
+      <a href="/index.html">Retour à la page d'accueil PauConnect</a>
     </div>
-    <script src="dynamic-link.js"></script>
-  </body>
+  </div>
+  <script src="dynamic-link.js"></script>
+  <script src="ouvriruncompte.js"></script>
+</body>
+
 </html>

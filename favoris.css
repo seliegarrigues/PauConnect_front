@@ -1,0 +1,143 @@
+button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 42px;
+    padding: 10px;
+    background-color: #2e4053;
+    border: none;
+    border-radius: 3px;
+    min-width: fit-content;
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 2px 3px rgba(46, 64, 83, 0.5);
+    cursor: pointer;
+    gap: 10px;
+  
+    /* .button-text {
+        margin-right: 10px;
+      } */
+  
+    &.hover-button:hover {
+      background-color: #d35400;
+    }
+  
+    &.active-button:active {
+      background-color: #48c9b0;
+    }
+  
+    &.disabled-button {
+      background-color: #549ccb;
+      cursor: not-allowed;
+    }
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 2px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  button:hover,
+  input[type="button"]:hover,
+  input[type="submit"]:hover {
+    background-color: #d35400;
+  }
+  
+  #favoris {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  #favoris article {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    flex-direction: column;
+  }
+  
+  #favoris .Tete {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #favoris .c {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  #favoris .card {
+    flex: 0 0 33%;
+  
+    scroll-snap-align: start;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    background: #ffffff;
+    padding: 1rem;
+  }
+  
+  #favoris .topCard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  #favoris .topCard h6 {
+    flex: 2;
+    font-size: 1.25rem;
+    color: #3498db;
+  }
+  
+  #favoris .topCard .visuel img {
+    flex: 1;
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  #favoris .lowCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #favoris .detail1Card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  #favoris .detail2Card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  
+  #favoris .detail2Card button {
+    margin-bottom: 10px;
+    // ...  ...
+  }
+  

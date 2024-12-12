@@ -79,4 +79,16 @@ const spaceBlocks = document.querySelectorAll(".space-block");
 
     });
   });
+   // Sélection de tous les boutons dans la section category
+   const categoryButtons = document.querySelectorAll(".category button");
+
+   // Ajout d'un gestionnaire d'écouteur d'évènements au click
+   categoryButtons.forEach((button) => {
+     button.addEventListener("click", (event) => {
+       const url = button.getAttribute("data-href");
+       if (url) {
+         window.location.href = url;
+       }
+     });
+   });
 });
