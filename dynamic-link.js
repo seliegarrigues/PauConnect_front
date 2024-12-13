@@ -1,3 +1,4 @@
+export function someFunction() {
 document.addEventListener("DOMContentLoaded", () => {
     // Sélection de tous les liens ayant un attribut href.
     const links = document.querySelectorAll("a[href]");
@@ -92,3 +93,30 @@ const spaceBlocks = document.querySelectorAll(".space-block");
      });
    });
 });
+
+// dynamic-link.js
+
+// Récupérer les valeurs du localStorage
+let storageToken = localStorage.getItem('token');
+let storageSession = localStorage.getItem('session');
+let storageExpiresAt = localStorage.getItem('expiresAt');
+
+// Vérifier si les valeurs existent
+if (storageToken && storageSession && storageExpiresAt) {
+  // Convertir storageExpiresAt en objet Date
+  let expiresAt = new Date(storageExpiresAt);
+
+  // Vérifier si le jeton est toujours valide
+  if (expiresAt > new Date()) {
+    console.log('Le jeton est toujours valide.');
+    // Utiliser le jeton pour authentifier l'utilisateur
+  } else {
+    console.log('Le jeton a expiré.');
+    // Rediriger l'utilisateur vers la page de connexion ou renouveler le jeton
+  }
+} else {
+  console.log('Aucune session active trouvée.');
+  // Rediriger l'utilisateur vers la page de connexion
+}
+
+}
