@@ -93,7 +93,7 @@
             <a href="connexion.html"><span class="ghost">Se connecter</span></a>
 
           </button>
-          <button class="btn-connexion" type="button" aria-label="Se connecter" data-bs-toggle="modal"
+          <button class="btn-connexion hover-button btn" type="button" aria-label="Se connecter" data-bs-toggle="modal"
             data-bs-target="#staticBackdrop">
             <i class="button-icon fa-solid fa-user"></i>
           </button>
@@ -112,7 +112,7 @@
     <!-- champs de recherche -->
     <form class="formSearch" id="formSearch">
       <input class="formSearchInput" id="formSearchInput" type="text" placeholder="rechercher" dirname="Rechercher" />
-      <button id="validateSearchButton">
+      <button id="validateSearchButton" class="hover-button btn">
         <span class="formSubmitInputText">Rechercher</span>
         <!-- loupe pour version mobile -->
         <span class="formSubmitInputIcon"><i class="fas fa-search"></i></span>
@@ -147,7 +147,7 @@
         Mise à disposition d'informations claires et organisées pour tous
       </p>
 
-      <button class="cta">
+      <button class="cta ">
         <span id="actu">Explorer les dernières actualités</span>
       </button>
 
@@ -167,9 +167,8 @@
             000 habitants dans le sud de la France
           </p>
         </div>
-        <div class="carousel">
-          <div class="card">
-
+        <div class="carousel"id="articleCard">
+          <div class="card" >
             <div class="topCard"><a href="#articledetailpage1" aria-label="vers les details de l'article">
                 <h6>Titre de l'article</h6>
                 <div class="visuel">
@@ -402,7 +401,7 @@
         </div>
         </div>
       </article>
-      <article>
+      <article class="container my-5">
         <div class="Tete">
           <h2>Entreprises en Lumière</h2>
           <p>
@@ -412,139 +411,27 @@
             avec une courte description.
           </p>
         </div>
-        <div class="carousel">
-          <div class="businessCard">
-            <div class="cat">Catégorie d'activité <span></span></div>
-            <div class="identity">
-              <h6>Nom de l'entreprise</h6>
-              <img src="asset/logo1.jpg" alt="logo entreprise" loading="lazy" />
-            </div>
-            <div class="middleCard">
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                brève description.
-              </p>
-            </div>
-            <div class="lowCard2">
-              <div>
-                <a href="#cieDetailPage" aria-label="vers les details de l'entreprise"><button><span>En Savoir
-                      plus</span></button></a>
-              </div>
-              <div><a href="#"><i class="fas fa-comment-alt"></i></a>
-                <a href="#"><i class="fas fa-star"></i></a>
-                <a href=""><i class="fas fa-share-alt"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="businessCard">
-            <div class="cat">Catégorie d'activité <span></span></div>
-            <div class="identity">
-              <h6>Nom de l'entreprise</h6>
-              <img src="asset/logo1.jpg" alt="logo entreprise2" loading="lazy" />
-            </div>
-            <div class="middleCard">
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                brève description.
-              </p>
-            </div>
-            <div class="lowCard2">
-              <div>
-                <a href="#cieDetailPage" aria-label="vers les details de l'entreprise"><button><span>En Savoir
-                      plus</span></button></a>
-              </div>
-              <div><i class="fas fa-comment-alt"></i></div>
-              <a href="favoris.html" aria-label="Favoris"><span><i class="fas fa-star"></i></span></a>
-              <div><i class="fas fa-share-alt"></i></div>
-            </div>
-          </div>
-          <div class="businessCard">
-            <div class="cat">Catégorie d'activité <span></span></div>
-            <div class="identity">
-              <h6>Nom de l'entreprise</h6>
-              <img src="asset/logo1.jpg" alt="logo entreprise3" loading="lazy" />
-            </div>
-            <div class="middleCard">
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                brève description.</p>
-            </div>
-            <div class="lowCard2">
-              <div>
-                <a href="#cieDetailPage" aria-label="vers les details de l'entreprise"><button><span>En Savoir
-                      plus</span></button></a>
-              </div>
-              <div><i class="fas fa-comment-alt"></i></div>
-              <div><i class="fas fa-star"></i></div>
-              <div><i class="fas fa-share-alt"></i></div>
-            </div>
-          </div>
-          <div class="businessCard">
-            <div class="cat">Catégorie d'activité <span></span></div>
-            <div class="identity">
-              <h6>Nom de l'entreprise</h6>
-              <img src="asset/logo1.jpg" alt="logo entreprise4" loading="lazy" />
-            </div>
-            <div class="middleCard">
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                brève description.
-              </p>
-            </div>
-            <div class="lowCard2">
-              <div>
-                <a href="#cieDetailPage" aria-label="vers les details de l'entreprise5"><button><span>En Savoir
-                      plus</span></button></a>
-              </div>
-              <div><i class="fas fa-comment-alt"></i></div>
-              <div><i class="fas fa-star"></i></div>
-              <div><i class="fas fa-share-alt"></i></div>
-            </div>
-          </div>
-          <div class="businessCard">
-            <div class="cat">Catégorie d'activité <span></span></div>
-            <div class="identity">
-              <h6>Nom de l'entreprise</h6>
-              <img src="asset/logo1.jpg" alt="logo entreprise6" loading="lazy" />
-            </div>
-            <div class="middleCard">
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                brève description.
-              </p>
-            </div>
-            <div class="lowCard2">
-              <div>
-                <a href="#cieDetailPage" aria-label="vers les details de l'entreprise"><button><span>En Savoir
-                      plus</span></button></a>
-              </div>
-              <div><i class="fas fa-comment-alt"></i></div>
-              <div><i class="fas fa-star"></i></div>
-              <div><i class="fas fa-share-alt"></i></div>
-            </div>
-          </div>
-          <div class="businessCard">
-            <div class="cat">Catégorie d'activité <span></span></div>
-            <div class="identity">
-              <h6>Nom de l'entreprise</h6>
-              <img src="asset/logo1.jpg" alt="logo entreprise7" loading="lazy" />
-            </div>
-            <div class="middleCard">
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                brève description.
-              </p>
-            </div>
-            <div class="lowCard2">
-              <div>
-                <a href="#cieDetailPage" aria-label="vers les details de l'entreprise"><button><span>En Savoir
-                      plus</span></button></a>
-              </div>
-              <div><i class="fas fa-comment-alt"></i></div>
-              <div><i class="fas fa-star"></i></div>
-              <div><i class="fas fa-share-alt"></i></div>
-            </div>
-          </div>
+        <div class="carousel d-flex flex-wrap gap-4" id="businessCards">
+
+
+        
+          
+            
+           
+              
+             
+             
+          
+           
+            
+            
+            
+          
+          
+          
+          
+             
+          
         </div>
       </article>
     </section>
@@ -680,7 +567,7 @@
 
           <form id="newsletterForm">
             <input  id="emailInput" placeholder="Entrer votre adresse email" required />
-            <button id="newsLetterButton"  type="submit">S'abonner</button>
+            <button  class="hover-button btn" id="newsLetterButton"  type="submit">S'abonner</button>
           </form>
         </div>
         <!-- Social media icons section -->
@@ -762,5 +649,7 @@
     <script type="module" src="dynamic-link.js"></script>
   <script type="module" src="personnalized.js"></script>
   <script type="module" src="formSearch.js"></script>
+  <script src="callApi.js" type="module"></script>
+  
 </body>
 </html>
