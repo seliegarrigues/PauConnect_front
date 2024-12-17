@@ -26,10 +26,14 @@ document.addEventListener('DOMContentLoaded', function() {
         const passwordConfirmationInput = document.getElementById('passwordconfirmation');
         const passwordError = document.getElementById('passwordconfirmation_error');
 
-        if (passwordInput.value === passwordConfirmationInput.value) {
+        if (passwordInput.value ===''&& passwordConfirmationInput.value ==='') {
+            passwordError.textContent = 'Les champs de mot de passe ne peuvent pas être vide';
+            passwordError.style.color = 'red';
+        } else if(passwordInput.value === passwordConfirmationInput.value) {
             passwordError.textContent = 'OK';
             passwordError.style.color = 'green';
-        } else {
+        }
+         else {
             passwordError.textContent = 'Votre confirmation de mot de passe n\'est pas identique à votre mot de passe';
             passwordError.style.color = 'red';
         }
@@ -104,58 +108,3 @@ document.addEventListener('DOMContentLoaded', function() {
     fillFormFromLocalStorage();
 });
 
-// obtenir  profil google
-function onSuccess(googleUser) {
-    console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
-}
-
-function onFailure(error) {
-    console.log(error);
-}
-
-function renderButton() {
-    gapi.signin2.render('my-signin2', {
-        'scope': 'profile email',
-        'width': 240,
-        'height': 50,
-        'longtitle': true,
-        'theme': 'dark',
-        'onsuccess': onSuccess,
-        'onfailure': onFailure
-    });
-}
-
-// se connecter avec facebook user
-window.fbAsyncInit = function() {
-    FB.init({
-        appId: '929184045437182',
-        cookie: true,
-        xfbml: true,
-        version: 'v21.0'
-    });
-
-    FB.AppEvents.logPageView();
-
-    FB.getLoginStatus(function(response) {
-        statusChangeCallback(response);
-    });
-};
-
-(function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) { return; }
-    js = d.createElement(s); js.id = id;
-    js.src = "https://connect.facebook.net/en_US/sdk.js";
-    fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
-
-function statusChangeCallback(response) {
-    if (response.status === 'connected') {
-        console.log('Logged in and authenticated');
-        FB.api('/me', function(response) {
-            console.log('Successful login for: ' + response.name);
-        });
-    } else {
-        console.log('Not authenticated');
-    }
-}

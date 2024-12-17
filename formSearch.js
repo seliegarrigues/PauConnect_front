@@ -1,3 +1,6 @@
+ import file from "./article1.json" with {type:"json"};
+ 
+ 
 // formSearch.js
 document.addEventListener('DOMContentLoaded', function() {
   // Sélectionner les éléments nécessaires
@@ -17,50 +20,117 @@ document.addEventListener('DOMContentLoaded', function() {
   // Fonction pour sauvegarder les données dans le localStorage
   function saveToLocalStorage(query) {
     let queries = JSON.parse(localStorage.getItem('searchQueries')) || [];
-    queries.push(query);
+    queries.unshift(query);
     localStorage.setItem('searchQueries', JSON.stringify(queries));
   }
 
   // Fonction pour filtrer les cartes en fonction des mots tapés
   function filterCards(query) {
     const matchingCategories = categories.filter(category => category.includes(query.toLowerCase()));
-    if (matchingCategories.length > 0) {
-      // Supprimer les anciens résultats
-      while (articleCardDiv.firstChild) {
-        articleCardDiv.removeChild(articleCardDiv.firstChild);
-      }
+    console.log(matchingCategories)
+    
+    // vider les cartes existantes
+    while (articleCardDiv. firstChild){
+      articleCardDiv.removeChild(articleCardDiv.firstChild);
+    }
 
-      // Afficher les cartes correspondantes
-      defaultCards.forEach(card => {
-        if (matchingCategories.some(category => card.textContent.toLowerCase().includes(category))) {
-          articleCardDiv.appendChild(card.cloneNode(true));
-        }
+    // vérifier si une catégorie correspond 
+    const matchingArticles = file.articles.filter(article => matchingCategories.includes
+      (articles.category.toLowerCase())
+    );
+    if (matchingArticles.length > 0) {
+      matchingArticles.forEach (article =>{
+        createArticleCard(article);
       });
     } else {
-      // Supprimer les anciens résultats
-      while (articleCardDiv.firstChild) {
-        articleCardDiv.removeChild(articleCardDiv.firstChild);
-      }
 
       // Afficher le message "aucun résultat trouvé"
       const noResultsMessage = document.createElement("p");
       noResultsMessage.textContent = "Aucun résultat trouvé";
       articleCardDiv.appendChild(noResultsMessage);
-
-      // Afficher les 3 cartes par défaut
-      defaultCards.forEach(card => {
-        articleCardDiv.appendChild(card.cloneNode(true));
-      });
     }
-  }
+      
+    }
+  // fonction pour créer une carte des articles
+   function createArticleCard(article) {
+    const card = document.createElement("div");
+    card.className = "card";
 
-  // Fonction pour suggérer des mots en fonction des lettres tapées
-  function suggestWords(query) {
-    const queries = JSON.parse(localStorage.getItem('searchQueries')) || [];
-    const suggestions = queries.filter(q => q.includes(query.toLowerCase()));
-    // Afficher les suggestions (vous pouvez personnaliser cette partie en fonction de votre interface utilisateur)
-    console.log('Suggestions:', suggestions);
-  }
+    const topCard = document.createElement("div");
+    topCard.className = "topCard";
+    const link = document.createElement("a");
+    link.href = "#";
+    link.setAttribute("aria-label", "vers les details de l'article");
+    const title = document.createElement("h6");
+    title.textContent = article.title;
+    const img = document.createElement("img");
+    img.src = article.image;
+    img.alt = article.title;
+    img.loading = "lazy";
+    link.appendChild(title);
+    link.appendChild(img);
+    topCard.appendChild(link);
+
+    const middleCard = document.createElement("div");
+    middleCard.className = "middleCard";
+    const description = document.createElement("p");
+    description.textContent = article.description;
+    middleCard.appendChild(description);
+
+    const lowCard = document.createElement("div");
+    lowCard.className = "lowCard";
+    const detail1Card = document.createElement("div");
+    detail1Card.className = "detail1Card";
+    const author = document.createElement("p");
+    author.textContent = article.author;
+    const authorImg = document.createElement("img");
+    authorImg.width = "48";
+    authorImg.height = "48";
+    authorImg.src = "https://img.icons8.com/color/48/circled-user-male-skin-type-7--v1.png";
+    authorImg.alt = "circled-user-male-skin-type-7--v1";
+    authorImg.loading = "lazy";
+    const readTimeIcon = document.createElement("span");
+    readTimeIcon.innerHTML = '<i class="fas fa-clock"></i>';
+    const readTime = document.createElement("p");
+    readTime.textContent = `${article.readTime} minutes de lecture`;
+    detail1Card.appendChild(author);
+    detail1Card.appendChild(authorImg);
+    detail1Card.appendChild(readTimeIcon);
+    detail1Card.appendChild(readTime);
+
+    const detail2Card = document.createElement("div");
+    detail2Card.className = "detail2Card";
+    const readMoreButton = document.createElement("button");
+    readMoreButton.className = "btn-voir-plus";
+    readMoreButton.textContent = "Lire la suite";
+    const publishDate = document.createElement("p");
+    publishDate.textContent = `Publié le ${article.publishDate}`;
+    const category = document.createElement("p");
+    category.textContent = article.category;
+    const likes = document.createElement("span");
+    likes.textContent = article.likes;
+    const favoriteIcon = document.createElement("span");
+    favoriteIcon.innerHTML = '<a href="favoris.html" aria-label="Favoris"><i class="fas fa-star"></i></a>';
+    const shareIcon = document.createElement("span");
+    shareIcon.innerHTML = '<i class="fas fa-share"></i>';
+    detail2Card.appendChild(readMoreButton);
+    detail2Card.appendChild(publishDate);
+    detail2Card.appendChild(category);
+    detail2Card.appendChild(likes);
+    detail2Card.appendChild(favoriteIcon);
+    detail2Card.appendChild(shareIcon);
+
+    lowCard.appendChild(detail1Card);
+    lowCard.appendChild(detail2Card);
+
+    card.appendChild(topCard);
+    card.appendChild(middleCard);
+    card.appendChild(lowCard);
+
+    articleCardDiv.appendChild(card);
+   }
+
+  
 
   // Gestionnaire d'événements pour le bouton et la touche Entrée
   function handleSearch(event) {

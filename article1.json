@@ -1,0 +1,14 @@
+ [ {
+    "title" : "Titre1",
+    "category" : ["marketing", "actualités"],
+    "content" :"content1",
+    "readTime" : "3 min",
+    "author" : "Auteur1"
+},
+{
+  "title" : "Titre2",
+  "category" : ["developpement", "actualités"],
+  "content" :"content2",
+  "readTime": "2 minutes",
+  "author" : "Auteur2",
+}]
