@@ -110,7 +110,7 @@
       </nav>
     </div>
     <!-- champs de recherche -->
-    <form class="formSearch" id="formSearch">
+    <form class="formSearch" id="formSearch" action="" method="POST">
       <input class="formSearchInput" id="formSearchInput" type="text" placeholder="rechercher" dirname="Rechercher" />
       <button id="validateSearchButton" class="hover-button btn">
         <span class="formSubmitInputText">Rechercher</span>
@@ -565,8 +565,8 @@
             <p>Soyez les premiers à savoir ce qui se passe à proximité</p>
           </div>
 
-          <form id="newsletterForm">
-            <input  id="emailInput" placeholder="Entrer votre adresse email" required />
+          <form id="newsletterForm" action="" method="POST">
+            <input  id="emailInput" placeholder="Entrer votre adresse email" type="email" required />
             <button  class="hover-button btn" id="newsLetterButton"  type="submit">S'abonner</button>
           </form>
         </div>
