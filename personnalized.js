@@ -1,19 +1,19 @@
-// personnalized.js
+
 import { someFunction } from './dynamic-link.js';
 
 someFunction();
 
 document.addEventListener('DOMContentLoaded', function() {
-  // Récupérer les informations de l'utilisateur depuis le localStorage
+ 
   const surname = localStorage.getItem('surname');
   const name = localStorage.getItem('name');
 
-  // Sélectionner les éléments nécessaires
+  
   const switchElement = document.getElementById('switch');
   const welcomeElement = document.getElementById('welcome');
   const personalisationTextElement = document.getElementById('personalisationText');
 
-  // Fonction pour mettre à jour le contenu en fonction de l'état du switch
+  
   function updateContent() {
     if (switchElement.checked) {
       if (surname && name) {
@@ -28,9 +28,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
-  // Ajouter un gestionnaire d'événements pour le switch
+  
   switchElement.addEventListener('change', updateContent);
 
-  // Appeler la fonction initialement pour définir l'état initial
+
   updateContent();
 });

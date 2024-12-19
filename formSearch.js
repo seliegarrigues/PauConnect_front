@@ -11,30 +11,30 @@ document.addEventListener('DOMContentLoaded', function() {
   const defaultCards = lightSection.querySelectorAll('.card');
   const articleCardDiv = document.getElementById('articleCard');
 
-  // Catégories de filtrage
+
   const categories = [
     "marketing", "actualités", "développement web", "design", "ux",
     "expérience utilisateur", "accessibilité", "numérique responsable", "sécurité"
   ];
 
-  // Fonction pour sauvegarder les données dans le localStorage
+ 
   function saveToLocalStorage(query) {
     let queries = JSON.parse(localStorage.getItem('searchQueries')) || [];
     queries.unshift(query);
     localStorage.setItem('searchQueries', JSON.stringify(queries));
   }
 
-  // Fonction pour filtrer les cartes en fonction des mots tapés
+ 
   function filterCards(query) {
     const matchingCategories = categories.filter(category => category.includes(query.toLowerCase()));
     console.log(matchingCategories)
     
-    // vider les cartes existantes
+   
     while (articleCardDiv. firstChild){
       articleCardDiv.removeChild(articleCardDiv.firstChild);
     }
 
-    // vérifier si une catégorie correspond 
+   
     const matchingArticles = file.articles.filter(article => matchingCategories.includes
       (articles.category.toLowerCase())
     );
@@ -44,14 +44,14 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     } else {
 
-      // Afficher le message "aucun résultat trouvé"
+     
       const noResultsMessage = document.createElement("p");
       noResultsMessage.textContent = "Aucun résultat trouvé";
       articleCardDiv.appendChild(noResultsMessage);
     }
       
     }
-  // fonction pour créer une carte des articles
+
    function createArticleCard(article) {
     const card = document.createElement("div");
     card.className = "card";
@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', function() {
     suggestWords(query);
   }
 
-  // Ajouter les gestionnaires d'événements
+  
   formSearch.addEventListener('submit', handleSearch);
   formSearchInput.addEventListener('input', handleInputChange);
   validateSearchButton.addEventListener('click', handleSearch);
@@ -161,7 +161,7 @@ document.addEventListener('DOMContentLoaded', function() {
     filterCards(lastQuery);
   }
 
-  // Effacer la donnée inscrite dans l'input précédemment au rechargement de la page
+  //
   window.addEventListener('beforeunload', function() {
     formSearchInput.value = '';
   });

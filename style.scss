@@ -604,6 +604,14 @@ footer {
   width: 0;
   height: 0;
 }
+.switch input:checked ~ .slider {
+  background-color: $accent-color; 
+}
+
+.switch input:checked ~ .slider:before {
+  transform: translateX(26px);
+}
+
 
 .slider {
   position: absolute;
@@ -643,7 +651,7 @@ footer {
   padding: 10px;
 }
 
-// When the switch is checked, show the welcome message
+// switch case
 .switch input:checked ~ .etat-txt #welcome {
   display: block;
 }

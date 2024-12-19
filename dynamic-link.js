@@ -1,10 +1,10 @@
-// dynamic-link.js
+
 export function someFunction() {
   document.addEventListener("DOMContentLoaded", () => {
     // Sélection de tous les liens ayant un attribut href.
     const links = document.querySelectorAll("a[href]");
 
-    // Ajout d'un gestionnaire d'écouteur d'évènements au click
+    
     links.forEach((link) => {
       link.addEventListener("click", (event) => {
         event.preventDefault(); // Empêche la navigation par défaut du navigateur
@@ -14,11 +14,10 @@ export function someFunction() {
         const url = link.getAttribute("href");
 
         if (url.startsWith("#")) {
-          const target = document.querySelector(url); // Récupération de l'élément ciblé
-
+          const target = document.querySelector(url); 
           if (target) {
-            // Vérification de l'existence de l'élément ciblé
-            target.scrollIntoView({ behavior: "smooth" }); // Scroll vers le ciblé en utilisant la méthode scrollIntoView
+           
+            target.scrollIntoView({ behavior: "smooth" }); 
             console.log("Scroll vers l'élément:", url);
           } else {
             showMessage('La section demandée est introuvable.');
@@ -54,10 +53,10 @@ export function someFunction() {
       linkedin: "https://www.linkedin.com/"
     };
 
-    // Sélectionne tous les liens avec l'attribut data-platform
+
     const platformLinks = document.querySelectorAll("[data-platform]");
 
-    // Parcourt les liens
+    
     platformLinks.forEach((link) => {
       link.addEventListener("click", (event) => {
         const platform = link.getAttribute("data-platform").toLowerCase();
@@ -89,10 +88,10 @@ export function someFunction() {
       });
     });
 
-    // Sélection de tous les boutons dans la section category
+    
     const categoryButtons = document.querySelectorAll(".category button");
 
-    // Ajout d'un gestionnaire d'écouteur d'évènements au click
+   
     categoryButtons.forEach((button) => {
       button.addEventListener("click", (event) => {
         const url = button.getAttribute("data-href");
@@ -104,7 +103,7 @@ export function someFunction() {
     });
   });
 
-  // Récupérer les valeurs du localStorage
+
   let storageToken = localStorage.getItem('token');
   let storageSession = localStorage.getItem('session');
   let storageExpiresAt = localStorage.getItem('expiresAt');

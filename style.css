@@ -123,7 +123,9 @@ input[type=submit] {
   box-shadow: 0 2px 3px rgba(46, 64, 83, 0.5);
   cursor: pointer;
   gap: 10px;
- 
+  /* .button-text {
+    margin-right: 10px;
+  } */
 }
 button.hover-button:hover,
 input[type=button].hover-button:hover,
@@ -595,6 +597,14 @@ footer {
   opacity: 0;
   width: 0;
   height: 0;
+}
+
+.switch input:checked ~ .slider {
+  background-color: #d35400;
+}
+
+.switch input:checked ~ .slider:before {
+  transform: translateX(26px);
 }
 
 .slider {
